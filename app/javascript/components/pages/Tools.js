@@ -12,20 +12,18 @@ class Tools extends React.Component {
     tools: []
   }
 
-  componentDidMount(){
+  componentDidMount = () => {
     fetch('/tools.json')
-    .then((response) => {
-      return response.json()
-    })
-    .then((json) => {
-      this.setState({tools: json})
-    })
-    .catch((e)=>{
-      console.log("Error", e)
+    .then((response) => response.json())
+    .then((tools) => {
+      this.setState({tools: tools})
     })
   }
 
+
+
   render () {
+    const {tools} = this.state
     return (
       <div>
         <h1>Tools</h1>
@@ -45,6 +43,7 @@ class Tools extends React.Component {
           )}
           </tbody>
         </table>
+
       </div>
     );
   }
