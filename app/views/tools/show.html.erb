@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tool.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tool.description %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @tool.model %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @tool.price %>
+</p>
+
+<p>
+  <strong>Serialnumber:</strong>
+  <%= @tool.serialnumber %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @tool.photo %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @tool.zipcode %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tool.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_tool_path(@tool) %> |
+<%= link_to 'Back', tools_path %>
