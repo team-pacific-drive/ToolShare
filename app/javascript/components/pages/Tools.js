@@ -9,7 +9,8 @@ import {
 
 class Tools extends React.Component {
   state = {
-    tools: []
+    tools: [],
+    newTools: null,
   }
 
   componentDidMount = () => {
@@ -20,7 +21,24 @@ class Tools extends React.Component {
     })
   }
 
+  handleDelete = (id) => {
+    fetch(`/tools/${id}.json`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+    .then((response) => {
+      this.deleteTool(id)
+      console.log(this.state.newTools);
+    })
+  }
 
+  deleteTool = (id) => {
+    let { newTools } = this.state
+    let filteredTools = this.state.tools.filter((tool) => tool.id !== id)
+    this.setState({ tools: filteredTools })
+  }
 
   render () {
     const {tools} = this.state
@@ -39,6 +57,7 @@ class Tools extends React.Component {
               <td>{tool.title}</td>
               <td>{tool.price}</td>
               <td>{tool.zipcode}</td>
+              <td><a id='deleteButton' type='submit' onClick={() => this.handleDelete(tool.id)} rel="nofollow" >Delete</a></td>
             </tr>
           )}
           </tbody>
