@@ -79,7 +79,7 @@ handleChange = (event) => {
             value={toolAttributes.price}
             onChange={this.handleChange}
           />
-          <label htmlFor="serialnumber">Serial #</label>
+          <label htmlFor="serialnumber">Serial Number</label>
           <input
             type="text"
             name="serialnumber"

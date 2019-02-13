@@ -7,7 +7,7 @@ import {
   Switch,
 } from 'react-router-dom'
 
-import Tools from './pages/Tools'
+import MyTools from './pages/MyTools'
 import NewTools from './pages/NewTools'
 
 class AuthenticatedApp extends React.Component {
@@ -16,7 +16,7 @@ class AuthenticatedApp extends React.Component {
       <Router>
         <div>
           <h1>AuthenticatedApp</h1>
-          <Route path="/tool_list" exact render={(props) => <Tools/>} />
+          <Route path="/tool_list" exact render={(props) => <MyTools/>} />
           <Route path='/add_tools' exact render={(props) => <NewTools />} />
         </div>
       </Router>
