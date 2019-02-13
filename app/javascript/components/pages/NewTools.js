@@ -31,7 +31,7 @@ handleSubmit = (event) => {
     },
     body: JSON.stringify({tool: this.state.toolAttributes})
     })
-    .then((repsonse) => {
+    .then((response) => {
       this.setState({responseOk: true})
     })
   }
