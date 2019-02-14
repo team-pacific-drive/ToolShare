@@ -7,6 +7,7 @@ import {
   Switch,
 } from 'react-router-dom'
 
+import NavBar from './pages/NavBar'
 import MyTools from './pages/MyTools'
 import NewTools from './pages/NewTools'
 import ToolDetail from './pages/ToolDetail'
@@ -52,6 +53,7 @@ class AuthenticatedApp extends React.Component {
     return (
       <Router>
         <div>
+          <NavBar/>
           <h1>Member Page</h1>
           <Route path="/my_tools" exact render={(props) =>
             <MyTools
