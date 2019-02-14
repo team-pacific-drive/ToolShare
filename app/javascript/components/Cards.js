@@ -3,16 +3,19 @@ import PropTypes from "prop-types"
 
 const Cards = (props) => {
   return (
-    <div class="card medium">
-      <div class="card-image">
+    <div className="card medium">
+      <div className="card-image">
         <img src="https://materializecss.com/images/sample-1.jpg"/>
-        <span class="card-title">{props.title}</span>
       </div>
-      <div class="card-content">
-        <p>If need basic description</p>
+      <div className="card-content">
+      <span className="card-title custom__title">{props.title}</span>
+        <p>Model: {props.model}</p>
       </div>
-      <div class="card-action">
-        <a href="#">Link to Detailed</a>
+      <div className="card-action">
+        <p>
+          <a className='left' href="#">Detailed Listing</a>
+          <span className='right'>${props.price}/day</span>
+        </p>
       </div>
     </div>
   );

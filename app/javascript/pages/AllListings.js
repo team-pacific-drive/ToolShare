@@ -18,12 +18,15 @@ class AllListings extends React.Component {
 
   render () {
     return (
-      <div style={{width: '80%', marginLeft: '10%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+      <div className='listings__container'>
         <h1>All Listings</h1>
       <div class="grid__listing">
         {this.state.tools.map((tool, index) =>
           <Cards key={index}
             title={tool.title}
+            price={tool.price}
+            zipcode={tool.zipcode}
+            model={tool.model}
           />
         )}
         </div>
