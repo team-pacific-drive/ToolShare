@@ -35,7 +35,7 @@ class ToolDetail extends React.Component {
             <p class="detail-text">Zip Code: {tool.zipcode}</p>
           </div>
         }
-        <Link to="/my_tools">Back to My Listings</Link>
+        <Link to="/all_listings">Back to Listings</Link>
       </div>
     );
   }

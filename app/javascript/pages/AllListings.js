@@ -27,6 +27,7 @@ class AllListings extends React.Component {
             price={tool.price}
             zipcode={tool.zipcode}
             model={tool.model}
+            id={tool.id}
           />
         )}
         </div>
