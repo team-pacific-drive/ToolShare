@@ -26,10 +26,13 @@ class AllListings extends React.Component {
     return (
       <div className='listings__container'>
         <h1>All Listings</h1>
+
+      <div className="grid__listing">
+
         <a className="waves-effect waves-light btn add" href='/add_tools'>
           <i className="material-icons left">add</i>Create New Listing
         </a>
-      <div class="grid__listing">
+
         {this.state.tools.map((tool, index) =>
           <Cards key={index}
             title={tool.title}
