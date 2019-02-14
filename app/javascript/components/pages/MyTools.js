@@ -12,7 +12,7 @@ class MyTools extends React.Component {
   state = {
     tools: [],
     newTools: null,
-  }d
+  }
 
   componentDidMount = () => {
     fetch('/tools.json')
