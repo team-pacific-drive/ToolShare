@@ -20,7 +20,7 @@ class AllListings extends React.Component {
     return (
       <div className='listings__container'>
         <h1>All Listings</h1>
-      <div class="grid__listing">
+      <div className="grid__listing">
         {this.state.tools.map((tool, index) =>
           <Cards key={index}
             title={tool.title}
