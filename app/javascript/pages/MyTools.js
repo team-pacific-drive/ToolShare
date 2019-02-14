@@ -1,13 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link
-} from 'react-router-dom'
-
 class MyTools extends React.Component {
   state = {
     tools: [],
@@ -31,7 +24,6 @@ class MyTools extends React.Component {
     })
     .then((response) => {
       this.deleteTool(id)
-      console.log(this.state.newTools);
     })
   }
 
@@ -41,13 +33,12 @@ class MyTools extends React.Component {
     this.setState({ tools: filteredTools })
   }
 
-  render () {
-    const {tools} = this.state
+  render(){
     return (
       <div>
         <h1>My Tools</h1>
-        <table>
-          <tbody>
+        <table className='striped responsive-table' style={{width:'60vw'}}>
+          <thead>
             <tr>
               <th>Title</th>
               <th>Model</th>
@@ -56,6 +47,8 @@ class MyTools extends React.Component {
               <th>Price Per Hour</th>
               <th>Zip Code</th>
             </tr>
+            </thead>
+            <tbody>
             {this.state.tools.map((tool, index) =>
             <tr key={index}>
               <td>{tool.title}</td>
@@ -64,16 +57,20 @@ class MyTools extends React.Component {
               <td>{tool.price}</td>
               <td>Need to add</td>
               <td>{tool.zipcode}</td>
+              <td>{tool.id}</td>
+              <td>{tool.user_id}</td>
               <td>
                 <a id='deleteButton' className="waves-effect waves-light btn-small" type='submit' onClick={() => this.handleDelete(tool.id)} rel="nofollow">
-                    <i class="material-icons left">remove</i>
-                Delete</a>
+                  <i className="material-icons left">remove</i>Delete
+                </a>
               </td>
             </tr>
           )}
           </tbody>
         </table>
-        <a className="waves-effect waves-light btn add" href='/add_tools'><i class="material-icons left">add</i>Add Tools</a>
+        <a className="waves-effect waves-light btn add" href='/add_tools'>
+          <i className="material-icons left">add</i>Add Tools
+        </a>
       </div>
     );
   }

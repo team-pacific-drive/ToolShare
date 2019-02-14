@@ -7,17 +7,25 @@ import {
   Switch,
 } from 'react-router-dom'
 
-import MyTools from './pages/MyTools'
-import NewTools from './pages/NewTools'
+import NavBar from './NavBar'
+
+import AllListings from '../pages/AllListings'
+import MyTools from '../pages/MyTools'
+import NewTools from '../pages/NewTools'
+import ToolDetail from '../pages/ToolDetail'
+
 
 class AuthenticatedApp extends React.Component {
   render () {
     return (
       <Router>
         <div>
-          <h1>AuthenticatedApp</h1>
-          <Route path="/tool_list" exact render={(props) => <MyTools/>} />
-          <Route path='/add_tools' exact render={(props) => <NewTools />} />
+          <NavBar/>
+          <h1>Member Page</h1>
+          <Route path='/all_listings' component={AllListings}/>
+          <Route path="/my_tools" exact component={MyTools}/>
+          <Route path="/my_tools/:id" exact component={ToolDetail}/>
+          <Route path='/add_tools' exact component={NewTools} />
         </div>
       </Router>
     );
