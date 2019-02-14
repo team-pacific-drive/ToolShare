@@ -8,7 +8,16 @@ import MyTools from '../../../components/pages/MyTools';
 Enzyme.configure({ adapter: new Adapter() })
 
 it('it renders My Tools', () => {
-  const one = shallow(<MyTools />);
+  fetch.mockResponseOnce(JSON.stringify({ tools: [
+    {
+      title: 'lawnmower',
+      model: 'T1000',
+      serialnumber: '39553d1',
+      price: '12',
+      zipcode: '92009'
+    }
+  ] }))
+  const one = shallow(<MyTools />)
   const two = <h1>My Tools</h1>
   expect(one.contains(two)).toBe(true);
 })
