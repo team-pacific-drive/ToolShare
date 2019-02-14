@@ -47,7 +47,7 @@ handleChange = (event) => {
     return (
       <div>
         {responseOk &&
-        <Redirect to="/tool_list" />
+        <Redirect to="/my_tools" />
         }
         <h1>List a tool</h1>
         <form onSubmit={this.handleSubmit}>
