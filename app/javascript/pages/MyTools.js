@@ -12,7 +12,6 @@ class MyTools extends React.Component {
     .then((response) => response.json())
     .then((tools) => {
       this.setState({tools: tools})
-      console.log(tools);
     })
   }
 
@@ -25,7 +24,6 @@ class MyTools extends React.Component {
     })
     .then((response) => {
       this.deleteTool(id)
-      console.log(this.state.newTools);
     })
   }
 
