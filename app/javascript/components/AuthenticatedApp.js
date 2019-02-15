@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 
 import NavBar from './NavBar'
+import GoogleMaps from './GoogleMaps'
 
 import AllListings from '../pages/AllListings'
 import MyTools from '../pages/MyTools'
@@ -21,6 +22,7 @@ class AuthenticatedApp extends React.Component {
       <Router>
         <div>
           <NavBar/>
+          <GoogleMaps/>
           <h1>Member Page</h1>
           <Route path='/' exact component={AllListings}/>
           <Route path="/my_tools" exact component={MyTools}/>
