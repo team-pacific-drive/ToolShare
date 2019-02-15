@@ -1,15 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link
-} from 'react-router-dom'
-
 const Cards = (props) => {
-
   return (
     <div className="card medium">
       <a href={`/my_tools/${props.id}`}>
@@ -22,7 +14,7 @@ const Cards = (props) => {
         </div>
         <div className="card-action">
           <p>
-            <a className='left' href="#">Detailed Listing</a>
+            <a className='left' href="#">Details</a>
             <span className='right'>${props.price}/day</span>
           </p>
         </div>
