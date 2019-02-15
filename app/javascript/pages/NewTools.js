@@ -32,7 +32,11 @@ handleSubmit = (event) => {
     body: JSON.stringify({tool: this.state.toolAttributes})
     })
     .then((response) => {
+      return response.json() 
+    }).then((content) => {
       this.setState({responseOk: true})
+    }).catch((error) => {
+      console.log("error", error);
     })
   }
 
