@@ -27,10 +27,13 @@ class AllListings extends React.Component {
       <div className='listings__container'>
         <h1>All Listings</h1>
 
+<<<<<<< HEAD
       <div className="grid__listing">
+=======
+>>>>>>> master
 
         <a className="waves-effect waves-light btn add" href='/add_tools'>
-        <i className="material-icons left">add</i>Create New Listing
+          <i className="material-icons left">add</i>Create New Listing
         </a>
 
 

@@ -8,12 +8,13 @@ import {
 } from 'react-router-dom'
 
 import NavBar from './NavBar'
+import GoogleMaps from './GoogleMaps'
 
 import AllListings from '../pages/AllListings'
 import MyTools from '../pages/MyTools'
 import NewTools from '../pages/NewTools'
 import ToolDetail from '../pages/ToolDetail'
-
+import NotFound from '../pages/NotFound'
 
 class AuthenticatedApp extends React.Component {
   render () {
@@ -22,14 +23,18 @@ class AuthenticatedApp extends React.Component {
         <div>
           <NavBar/>
           <h1>Member Page</h1>
-          <Route path='/all_listings' component={AllListings}/>
-          <Route path="/my_tools" exact component={MyTools}/>
-          <Route path="/my_tools/:id" exact component={ToolDetail}/>
-          <Route path='/add_tools' exact component={NewTools} />
+          <Switch>
+            <Route path='/' exact component={AllListings}/>
+            <Route path="/my_tools" exact component={MyTools}/>
+            <Route path="/tool_details/:id" exact component={ToolDetail}/>
+            <Route path='/add_tools' exact component={NewTools} />
+            <Route path='/' component={NotFound} />
+          </Switch>
         </div>
       </Router>
     );
   }
 }
+// <GoogleMaps/>
 
 export default AuthenticatedApp

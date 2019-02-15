@@ -1,11 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link
-} from 'react-router-dom'
+
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+
+const API_KEY = "AIzaSyDJ61AO_zemRdmN--SzsfliDbDzXsBJMeY"
 
 class ToolDetail extends React.Component {
   state = {
@@ -27,20 +25,19 @@ class ToolDetail extends React.Component {
         {this.state.tool &&
           <div>
             <h1>{tool.title}</h1>
-            <div class="detail-img"><p>{tool.photo}</p></div>
-            <p class="detail-desc">{tool.description}</p>
-            <p class="detail-text">{tool.model}</p>
-            <p class="detail-text">{tool.serialnumber}</p>
-            <p class="detail-text">${tool.price}/day</p>
-            <p class="detail-text">Zip Code: {tool.zipcode}</p>
+            <div className="detail-img"><p>{tool.photo}</p></div>
+            <p className="detail-desc">{tool.description}</p>
+            <p className="detail-text">{tool.model}</p>
+            <p className="detail-text">{tool.serialnumber}</p>
+            <p className="detail-text">${tool.price}/day</p>
+            <p className="detail-text">Zip Code: {tool.zipcode}</p>
           </div>
         }
-        <Link to="/all_listings">Back to Listings</Link>
+        <a className="waves-effect waves-light btn" href='/'>Back to Listings
+        </a>
       </div>
     );
   }
 }
 
 export default ToolDetail
-//  /*<p>{tool.photo}</p>*/
-//  /*<p>{users.firstname}</p>*/
