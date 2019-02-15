@@ -1,0 +1,24 @@
+@media (min-width: 600px) {
+  .detail-img {
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+  }
+}
+@media (max-width: 599px) {
+  .detail-img {
+    width: 100%;
+    padding-top: 100%;
+    background-color: lightyellow;
+  }
+}
+
+.detail-desc {
+  width: 90%;
+  font-size: 18pt;
+}
+
+.detail-text {
+  width: 90%;
+  font-size: 12pt;
+}
