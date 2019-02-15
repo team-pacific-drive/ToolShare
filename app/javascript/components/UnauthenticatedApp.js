@@ -16,7 +16,7 @@ class UnauthenticatedApp extends React.Component {
         <div>
           <NavBar/>
           <h1>Guest page</h1>
-          <Route path='/' component={AllListings}/>
+          <Route path='/' exact component={AllListings}/>
         </div>
       </Router>
     );

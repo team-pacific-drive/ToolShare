@@ -1,11 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link
-} from 'react-router-dom'
 
 class ToolDetail extends React.Component {
   state = {
