@@ -22,17 +22,19 @@ class AuthenticatedApp extends React.Component {
       <Router>
         <div>
           <NavBar/>
-          <GoogleMaps/>
           <h1>Member Page</h1>
-          <Route path='/' exact component={AllListings}/>
-          <Route path="/my_tools" exact component={MyTools}/>
-          <Route path="/tool_details/:id" exact component={ToolDetail}/>
-          <Route path='/add_tools' exact component={NewTools} />
-          <Route path='/' component={NotFound} />
+          <Switch>
+            <Route path='/' exact component={AllListings}/>
+            <Route path="/my_tools" exact component={MyTools}/>
+            <Route path="/tool_details/:id" exact component={ToolDetail}/>
+            <Route path='/add_tools' exact component={NewTools} />
+            <Route path='/' component={NotFound} />
+          </Switch>
         </div>
       </Router>
     );
   }
 }
+// <GoogleMaps/>
 
 export default AuthenticatedApp
