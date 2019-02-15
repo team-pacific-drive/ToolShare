@@ -7,6 +7,7 @@ const NavBar = (props) => {
       <div className="nav-wrapper">
         <a href="#" className="brand-logo center">ToolShare</a>
         <ul id="nav-mobile" className="left hide-on-med-and-down">
+          <li><a href="/all_listings">All Listings</a></li>
           <li><a href="/add_listings">Add Listings</a></li>
           <li><a href="/my_tools">My Tools</a></li>
           <li><a href="/users/sign_in">Sign In</a></li>

@@ -24,7 +24,7 @@ class AuthenticatedApp extends React.Component {
           <h1>Member Page</h1>
           <Route path='/all_listings' component={AllListings}/>
           <Route path="/my_tools" exact component={MyTools}/>
-          <Route path="/my_tools/:id" exact component={ToolDetail}/>
+          <Route path="/tool_details/:id" exact component={ToolDetail}/>
           <Route path='/add_tools' exact component={NewTools} />
         </div>
       </Router>

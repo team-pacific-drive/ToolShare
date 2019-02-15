@@ -7,9 +7,10 @@ const Cards = (props) => {
       <div className="card-image">
         <img src="https://materializecss.com/images/sample-1.jpg"/>
       </div>
-      <div className="card-content">
-      <span className="card-title custom__title">{props.title}</span>
-        <p>Model: {props.model}</p>
+      <div className="card-content" style={{display: 'flex', flexDirection: 'column'}}>
+        <span className="card-title custom__title left">{props.title}</span>
+        <p className='right'>City/Town, {props.zipcode}</p>
+        <p className='left'>{props.model}</p>
       </div>
       <div className="card-action">
         <p>
