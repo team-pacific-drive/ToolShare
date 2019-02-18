@@ -4,16 +4,33 @@ import PropTypes from "prop-types"
 class MyTools extends React.Component {
   state = {
     tools: [],
-    newTools: null,
   }
 
   componentDidMount = () => {
     fetch('/tools.json')
     .then((response) => response.json())
     .then((tools) => {
-      this.setState({tools: tools})
+      let filteredTools = tools.filter((tool) => tool.user_id === this.props.currentUserId)
+      this.setState({tools: filteredTools})
     })
   }
+
+  // handleUsers = (id) => {
+  //   fetch(`/tools.json`, {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //   })
+  //   .then((response) => {
+  //     this.currentUserTool(id)
+  //   })
+  // }
+  //
+  // currentUserTool = (id) => {
+  //   let currentUser = this.state.tools.filter((tool) => tool.user_id === id)
+  //   this.setState({tools: currentUser})
+  // }
 
   handleDelete = (id) => {
     fetch(`/tools/${id}.json`, {
@@ -28,7 +45,6 @@ class MyTools extends React.Component {
   }
 
   deleteTool = (id) => {
-    let { newTools } = this.state
     let filteredTools = this.state.tools.filter((tool) => tool.id !== id)
     this.setState({ tools: filteredTools })
   }

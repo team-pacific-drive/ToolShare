@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 const Cards = (props) => {
   return (
     <div className="card medium hoverable">
-      <a href={`/tool_details/${props.id}`}>
         <div className="card-image">
           <img src="https://materializecss.com/images/sample-1.jpg"/>
         </div>
@@ -14,13 +13,14 @@ const Cards = (props) => {
         </div>
         <div className="card-action">
           <p>
-            <a className='left' href="#">Details</a>
+            <a className='left' href={`/tool_details/${props.id}`}>Details</a>
             <span className='right'>${props.price}/day</span>
           </p>
         </div>
-      </a>
     </div>
   );
 }
 
+// /*<a href={`/tool_details/${props.id}`}>*/
+// /*</a>*/
 export default Cards

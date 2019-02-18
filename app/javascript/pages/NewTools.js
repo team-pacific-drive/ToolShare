@@ -101,7 +101,7 @@ handleChange = (event) => {
           />
           <button type="submit">Create</button>
         </form>
-        <a href='/all_listings'>Listings</a>
+        <a href='/'>Listings</a>
       </div>
     );
   }

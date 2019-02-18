@@ -17,15 +17,34 @@ import ToolDetail from '../pages/ToolDetail'
 import NotFound from '../pages/NotFound'
 
 class AuthenticatedApp extends React.Component {
+  state = {
+    tools: [],
+    currentUser: this.props.current_user,
+  }
+
+  componentDidMount = () => {
+    fetch('/tools.json')
+    .then((response) => response.json())
+    .then((tools) => {
+      this.setState({tools: tools})
+    })
+  }
+
   render () {
+    const { currentUser, tools } = this.state
     return (
       <Router>
         <div>
-          <NavBar/>
+          <NavBar
+            firstname={currentUser.firstname}
+            lastname={currentUser.lastname}
+          />
           <h1>Member Page</h1>
           <Switch>
-            <Route path='/' exact component={AllListings}/>
-            <Route path="/my_tools" exact component={MyTools}/>
+            <Route path='/' exact render={(props) =>
+              < AllListings/>}/>
+            <Route path='/maps' exact component={GoogleMaps}/>
+            <Route path="/my_tools" exact render={(props) => < MyTools currentUserId={currentUser.id}/>}/>
             <Route path="/tool_details/:id" exact component={ToolDetail}/>
             <Route path='/add_tools' exact component={NewTools} />
             <Route path='/' component={NotFound} />
