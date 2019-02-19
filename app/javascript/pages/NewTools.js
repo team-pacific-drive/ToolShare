@@ -3,10 +3,14 @@ import PropTypes from "prop-types"
 
 import {Redirect} from 'react-router-dom'
 
+import Errors from '../components/Errors'
+
 class NewTools extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      message: null,
+      errors: null,
       responseOk: false,
       toolAttributes: {
         title: '',
@@ -21,6 +25,35 @@ class NewTools extends React.Component {
     }
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    console.log("Tool successfully submitted");
+    fetch('/tools.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({tool: this.state.toolAttributes})
+    }).then((response) => {
+      return response.json().then((json) => {
+        if(response.status === 201) {
+          this.setState({responseOk: true})
+          // console.log(response)
+        } else {
+          this.setState({responseOk: false, errors: json})
+        }
+        return json
+      })
+    }).catch((errors) => {
+      this.setState({responseOk: false, errors: {"System Error": ["Unknown problem has occurred"]}})
+    })
+  }
+
+  handleChange = (event) => {
+    const { toolAttributes } = this.state
+    toolAttributes[event.target.name] = event.target.value
+    this.setState({toolAttributes: toolAttributes})
+  }
 
 handleSubmit = (event) => {
   event.preventDefault()
@@ -33,7 +66,7 @@ handleSubmit = (event) => {
     body: JSON.stringify({tool: this.state.toolAttributes})
     })
     .then((response) => {
-      return response.json() 
+      return response.json()
     }).then((content) => {
       this.setState({responseOk: true})
     }).catch((error) => {
@@ -48,14 +81,16 @@ handleChange = (event) => {
   let newToolAttributes = {...toolAttributes, ...addUserNames}
   this.setState({toolAttributes: newToolAttributes})
 }
+>>>>>>> master
 
   render () {
-    const { responseOk, toolAttributes } = this.state
+    const { responseOk, toolAttributes, errors } = this.state
     return (
       <div>
         {responseOk &&
         <Redirect to="/account/my_tools" />
         }
+        <Errors errors={errors}/>
         <h1>List a tool</h1>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="title">Title</label>
