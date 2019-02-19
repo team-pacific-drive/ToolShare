@@ -46,7 +46,6 @@ handleChange = (event) => {
 }
 
   render () {
-    console.log('test', this.props.lastname);
     const { responseOk, toolAttributes } = this.state
     return (
       <div>

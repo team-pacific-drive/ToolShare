@@ -15,16 +15,7 @@ import NewTools from '../pages/NewTools'
 
 class AuthenticatedApp extends React.Component {
   state = {
-    tools: [],
     currentUser: this.props.current_user,
-  }
-
-  componentDidMount = () => {
-    fetch('/tools.json')
-    .then((response) => response.json())
-    .then((tools) => {
-      this.setState({tools: tools})
-    })
   }
 
   nameInitial = () => {
@@ -33,7 +24,7 @@ class AuthenticatedApp extends React.Component {
   }
 
   render () {
-    const { currentUser, tools } = this.state
+    const { currentUser } = this.state
     return (
       <Router>
         <div>
