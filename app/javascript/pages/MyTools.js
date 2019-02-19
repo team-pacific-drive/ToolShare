@@ -15,23 +15,6 @@ class MyTools extends React.Component {
     })
   }
 
-  // handleUsers = (id) => {
-  //   fetch(`/tools.json`, {
-  //     method: 'GET',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //   })
-  //   .then((response) => {
-  //     this.currentUserTool(id)
-  //   })
-  // }
-  //
-  // currentUserTool = (id) => {
-  //   let currentUser = this.state.tools.filter((tool) => tool.user_id === id)
-  //   this.setState({tools: currentUser})
-  // }
-
   handleDelete = (id) => {
     fetch(`/tools/${id}.json`, {
       method: 'DELETE',
@@ -84,7 +67,7 @@ class MyTools extends React.Component {
           )}
           </tbody>
         </table>
-        <a className="waves-effect waves-light btn add" href='/add_tools'>
+        <a className="waves-effect waves-light btn add" href='/account/add_tools'>
           <i className="material-icons left">add</i>Add Tools
         </a>
       </div>

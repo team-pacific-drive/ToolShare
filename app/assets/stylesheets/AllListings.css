@@ -10,7 +10,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-template-columns: repeat(3, 17rem);
   grid-gap: 3rem;
 }
 

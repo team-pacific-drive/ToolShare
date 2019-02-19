@@ -30,6 +30,11 @@ class AuthenticatedApp extends React.Component {
     })
   }
 
+  nameInitial = () => {
+    let lastname = this.state.currentUser.lastname.split('', 1)
+    return lastname
+  }
+
   render () {
     const { currentUser, tools } = this.state
     return (
@@ -37,17 +42,15 @@ class AuthenticatedApp extends React.Component {
         <div>
           <NavBar
             firstname={currentUser.firstname}
-            lastname={currentUser.lastname}
+            lastNameInitial={this.nameInitial()}
           />
           <h1>Member Page</h1>
           <Switch>
-            <Route path='/' exact render={(props) =>
-              < AllListings/>}/>
             <Route path='/maps' exact component={GoogleMaps}/>
-            <Route path="/my_tools" exact render={(props) => < MyTools currentUserId={currentUser.id}/>}/>
+            <Route path="/account/my_tools" exact render={(props) => < MyTools currentUserId={currentUser.id}/>}/>
+            <Route path='/account/add_tools' exact component={NewTools} />
             <Route path="/tool_details/:id" exact component={ToolDetail}/>
-            <Route path='/add_tools' exact component={NewTools} />
-            <Route path='/' component={NotFound} />
+            <Route path="/" component={NotFound}/>
           </Switch>
         </div>
       </Router>
