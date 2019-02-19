@@ -39,9 +39,7 @@ class AuthenticatedApp extends React.Component {
               < MyTools currentUserId={currentUser.id}/>}
             />
             <Route path='/account/add_tools' exact render={(props) =>
-              < NewTools firstname={currentUser.firstname}
-                         lastname={currentUser.lastname}
-              />}
+              < NewTools />}
             />
           </Switch>
         </div>

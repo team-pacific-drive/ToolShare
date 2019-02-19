@@ -37,13 +37,14 @@ handleSubmit = (event) => {
     })
   }
 
-handleChange = (event) => {
-  const { toolAttributes } = this.state
-  toolAttributes[event.target.name] = event.target.value
-  let addUserNames = { user_firstname: this.props.firstname, user_lastname: this.props.lastname }
-  let newToolAttributes = {...toolAttributes, ...addUserNames}
-  this.setState({toolAttributes: newToolAttributes})
-}
+//Used delegate in model instead
+// handleChange = (event) => {
+//   const { toolAttributes } = this.state
+//   toolAttributes[event.target.name] = event.target.value
+//   let addUserNames = { user_firstname: this.props.firstname, user_lastname: this.props.lastname }
+//   let newToolAttributes = {...toolAttributes, ...addUserNames}
+//   this.setState({toolAttributes: newToolAttributes})
+// }
 
   render () {
     const { responseOk, toolAttributes } = this.state
