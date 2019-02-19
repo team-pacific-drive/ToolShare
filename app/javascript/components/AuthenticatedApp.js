@@ -10,11 +10,8 @@ import {
 import NavBar from './NavBar'
 import GoogleMaps from './GoogleMaps'
 
-import AllListings from '../pages/AllListings'
 import MyTools from '../pages/MyTools'
 import NewTools from '../pages/NewTools'
-import ToolDetail from '../pages/ToolDetail'
-import NotFound from '../pages/NotFound'
 
 class AuthenticatedApp extends React.Component {
   state = {
@@ -47,10 +44,14 @@ class AuthenticatedApp extends React.Component {
           <h1>Member Page</h1>
           <Switch>
             <Route path='/maps' exact component={GoogleMaps}/>
-            <Route path="/account/my_tools" exact render={(props) => < MyTools currentUserId={currentUser.id}/>}/>
-            <Route path='/account/add_tools' exact component={NewTools} />
-            <Route path="/tool_details/:id" exact component={ToolDetail}/>
-            <Route path="/" component={NotFound}/>
+            <Route path="/account/my_tools" exact render={(props) =>
+              < MyTools currentUserId={currentUser.id}/>}
+            />
+            <Route path='/account/add_tools' exact render={(props) =>
+              < NewTools firstname={currentUser.firstname}
+                         lastname={currentUser.lastname}
+              />}
+            />
           </Switch>
         </div>
       </Router>

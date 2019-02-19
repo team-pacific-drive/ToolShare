@@ -17,9 +17,10 @@ class NewTools extends React.Component {
         photo: '',
         zipcode: '',
         user_id: '',
-      }
+      },
     }
   }
+
 
 handleSubmit = (event) => {
   event.preventDefault()
@@ -39,10 +40,13 @@ handleSubmit = (event) => {
 handleChange = (event) => {
   const { toolAttributes } = this.state
   toolAttributes[event.target.name] = event.target.value
-  this.setState({toolAttributes: toolAttributes})
+  let addUserNames = { user_firstname: this.props.firstname, user_lastname: this.props.lastname }
+  let newToolAttributes = {...toolAttributes, ...addUserNames}
+  this.setState({toolAttributes: newToolAttributes})
 }
 
   render () {
+    console.log('test', this.props.lastname);
     const { responseOk, toolAttributes } = this.state
     return (
       <div>
