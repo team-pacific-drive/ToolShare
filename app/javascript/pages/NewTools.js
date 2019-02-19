@@ -81,7 +81,6 @@ handleChange = (event) => {
   let newToolAttributes = {...toolAttributes, ...addUserNames}
   this.setState({toolAttributes: newToolAttributes})
 }
->>>>>>> master
 
   render () {
     const { responseOk, toolAttributes, errors } = this.state
