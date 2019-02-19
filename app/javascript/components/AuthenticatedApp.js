@@ -10,25 +10,39 @@ import {
 import NavBar from './NavBar'
 import GoogleMaps from './GoogleMaps'
 
-import AllListings from '../pages/AllListings'
 import MyTools from '../pages/MyTools'
 import NewTools from '../pages/NewTools'
-import ToolDetail from '../pages/ToolDetail'
-import NotFound from '../pages/NotFound'
 
 class AuthenticatedApp extends React.Component {
+  state = {
+    currentUser: this.props.current_user,
+  }
+
+  nameInitial = () => {
+    let lastname = this.state.currentUser.lastname.split('', 1)
+    return lastname
+  }
+
   render () {
+    const { currentUser } = this.state
     return (
       <Router>
         <div>
-          <NavBar/>
+          <NavBar
+            firstname={currentUser.firstname}
+            lastNameInitial={this.nameInitial()}
+          />
           <h1>Member Page</h1>
           <Switch>
-            <Route path='/' exact component={AllListings}/>
-            <Route path="/my_tools" exact component={MyTools}/>
-            <Route path="/tool_details/:id" exact component={ToolDetail}/>
-            <Route path='/add_tools' exact component={NewTools} />
-            <Route path='/' component={NotFound} />
+            <Route path='/maps' exact component={GoogleMaps}/>
+            <Route path="/account/my_tools" exact render={(props) =>
+              < MyTools currentUserId={currentUser.id}/>}
+            />
+            <Route path='/account/add_tools' exact render={(props) =>
+              < NewTools firstname={currentUser.firstname}
+                         lastname={currentUser.lastname}
+              />}
+            />
           </Switch>
         </div>
       </Router>

@@ -17,9 +17,10 @@ class NewTools extends React.Component {
         photo: '',
         zipcode: '',
         user_id: '',
-      }
+      },
     }
   }
+
 
 handleSubmit = (event) => {
   event.preventDefault()
@@ -43,7 +44,9 @@ handleSubmit = (event) => {
 handleChange = (event) => {
   const { toolAttributes } = this.state
   toolAttributes[event.target.name] = event.target.value
-  this.setState({toolAttributes: toolAttributes})
+  let addUserNames = { user_firstname: this.props.firstname, user_lastname: this.props.lastname }
+  let newToolAttributes = {...toolAttributes, ...addUserNames}
+  this.setState({toolAttributes: newToolAttributes})
 }
 
   render () {
@@ -51,7 +54,7 @@ handleChange = (event) => {
     return (
       <div>
         {responseOk &&
-        <Redirect to="/my_tools" />
+        <Redirect to="/account/my_tools" />
         }
         <h1>List a tool</h1>
         <form onSubmit={this.handleSubmit}>
@@ -105,7 +108,7 @@ handleChange = (event) => {
           />
           <button type="submit">Create</button>
         </form>
-        <a href='/all_listings'>Listings</a>
+        <a href='/'>Listings</a>
       </div>
     );
   }
