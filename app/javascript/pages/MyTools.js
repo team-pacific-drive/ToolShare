@@ -4,11 +4,11 @@ import PropTypes from "prop-types"
 class MyTools extends React.Component {
   state = {
     tools: [],
-    newTools: null,
+    newTools: null
   }
 
   componentDidMount = () => {
-    fetch('/tools.json')
+    fetch(`/tools.json`)
     .then((response) => response.json())
     .then((tools) => {
       this.setState({tools: tools})
