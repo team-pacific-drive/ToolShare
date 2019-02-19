@@ -7,7 +7,7 @@ class MyTools extends React.Component {
   }
 
   componentDidMount = () => {
-    fetch('/tools.json')
+    fetch(`/tools.json`)
     .then((response) => response.json())
     .then((tools) => {
       let filteredTools = tools.filter((tool) => tool.user_id === this.props.currentUserId)
