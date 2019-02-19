@@ -55,33 +55,6 @@ class NewTools extends React.Component {
     this.setState({toolAttributes: toolAttributes})
   }
 
-handleSubmit = (event) => {
-  event.preventDefault()
-  console.log("Tool successfully submitted");
-  fetch('/tools.json', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({tool: this.state.toolAttributes})
-    })
-    .then((response) => {
-      return response.json()
-    }).then((content) => {
-      this.setState({responseOk: true})
-    }).catch((error) => {
-      console.log("error", error);
-    })
-  }
-
-handleChange = (event) => {
-  const { toolAttributes } = this.state
-  toolAttributes[event.target.name] = event.target.value
-  let addUserNames = { user_firstname: this.props.firstname, user_lastname: this.props.lastname }
-  let newToolAttributes = {...toolAttributes, ...addUserNames}
-  this.setState({toolAttributes: newToolAttributes})
-}
-
   render () {
     const { responseOk, toolAttributes, errors } = this.state
     return (
