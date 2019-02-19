@@ -87,65 +87,6 @@ handleChange = (event) => {
     const { responseOk, toolAttributes, errors } = this.state
     return (
       <div>
-<<<<<<< HEAD
-      {responseOk &&
-        <Redirect to="/my_tools" />
-      }
-      <Errors errors={errors}/>
-      <h1>List a tool</h1>
-      <form onSubmit={this.handleSubmit}>
-      <label htmlFor="title">Title</label>
-      <input
-      type="text"
-      name="title"
-      value={toolAttributes.title}
-      onChange={this.handleChange}
-      />
-      <label htmlFor="description">Description</label>
-      <input
-      type="text"
-      name="description"
-      value={toolAttributes.description}
-      onChange={this.handleChange}
-      />
-      <label htmlFor="model">Model</label>
-      <input
-      type="text"
-      name="model"
-      value={toolAttributes.model}
-      onChange={this.handleChange}
-      />
-      <label htmlFor="price">Price</label>
-      <input
-      type="number"
-      name="price"
-      value={toolAttributes.price}
-      onChange={this.handleChange}
-      />
-      <label htmlFor="serialnumber">Serial Number</label>
-      <input
-      type="text"
-      name="serialnumber"
-      value={toolAttributes.serialnumber}
-      onChange={this.handleChange}
-      />
-      <label htmlFor="photo">Photo</label>
-      <input
-      type="text"
-      name="photo"
-      value={toolAttributes.photo}
-      onChange={this.handleChange}
-      /><label htmlFor="zipcode">Zip Code</label>
-      <input
-      type="number"
-      name="zipcode"
-      value={toolAttributes.zipcode}
-      onChange={this.handleChange}
-      />
-      <button type="submit">Create</button>
-      </form>
-      <a href='/'>Listings</a>
-=======
         {responseOk &&
         <Redirect to="/account/my_tools" />
         }
@@ -203,7 +144,6 @@ handleChange = (event) => {
           <button type="submit">Create</button>
         </form>
         <a href='/'>Listings</a>
->>>>>>> master
       </div>
     );
   }
