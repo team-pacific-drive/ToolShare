@@ -1,10 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
-
-const API_KEY = "AIzaSyDJ61AO_zemRdmN--SzsfliDbDzXsBJMeY"
-
 class ToolDetail extends React.Component {
   state = {
     tool: null,

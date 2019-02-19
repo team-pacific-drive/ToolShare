@@ -4,14 +4,14 @@ import PropTypes from "prop-types"
 class MyTools extends React.Component {
   state = {
     tools: [],
-    newTools: null
   }
 
   componentDidMount = () => {
     fetch(`/tools.json`)
     .then((response) => response.json())
     .then((tools) => {
-      this.setState({tools: tools})
+      let filteredTools = tools.filter((tool) => tool.user_id === this.props.currentUserId)
+      this.setState({tools: filteredTools})
     })
   }
 
@@ -28,7 +28,6 @@ class MyTools extends React.Component {
   }
 
   deleteTool = (id) => {
-    let { newTools } = this.state
     let filteredTools = this.state.tools.filter((tool) => tool.id !== id)
     this.setState({ tools: filteredTools })
   }
@@ -68,7 +67,7 @@ class MyTools extends React.Component {
           )}
           </tbody>
         </table>
-        <a className="waves-effect waves-light btn add" href='/add_tools'>
+        <a className="waves-effect waves-light btn add" href='/account/add_tools'>
           <i className="material-icons left">add</i>Add Tools
         </a>
       </div>
