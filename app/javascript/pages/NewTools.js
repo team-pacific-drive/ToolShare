@@ -55,7 +55,10 @@ class NewTools extends React.Component {
     this.setState({toolAttributes: toolAttributes})
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   render () {
     const { responseOk, toolAttributes, errors } = this.state
     return (
