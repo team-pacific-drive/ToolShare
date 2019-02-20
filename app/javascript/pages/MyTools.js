@@ -34,39 +34,35 @@ class MyTools extends React.Component {
 
   render(){
     return (
-      <div>
-        <h1>My Tools</h1>
-        <table className='striped responsive-table' style={{width:'60vw'}}>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Model</th>
-              <th>Serial Number</th>
-              <th>Price Per Day</th>
-              <th>Price Per Hour</th>
-              <th>Zip Code</th>
-            </tr>
-            </thead>
-            <tbody>
-            {this.state.tools.map((tool, index) =>
-            <tr key={index}>
-              <td>{tool.title}</td>
-              <td>{tool.model}</td>
-              <td>{tool.serialnumber}</td>
-              <td>{tool.price}</td>
-              <td>Need to add</td>
-              <td>{tool.zipcode}</td>
-              <td>{tool.id}</td>
-              <td>{tool.user_id}</td>
-              <td>
-                <a id='deleteButton' className="waves-effect waves-light btn-small" type='submit' onClick={() => this.handleDelete(tool.id)} rel="nofollow">
-                  <i className="material-icons left">remove</i>Delete
-                </a>
-              </td>
-            </tr>
-          )}
-          </tbody>
-        </table>
+      <div className="mytools-container">
+        <h1 className="mytools-title">My Tools</h1>
+        <div className="my-list">
+          <table className="my-list-div" style={{width:'80vw'}}>
+              <tr>
+                <th></th>
+                <th>Item</th>
+                <th>Model</th>
+                <th>Serial Number</th>
+                <th>Price</th>
+                <th>Zip Code</th>
+              </tr>
+              {this.state.tools.map((tool, index) =>
+              <tr key={index}>
+                <td><img src={`${tool.photo}`} height="96" width="96"/></td>
+                <td>{tool.title}</td>
+                <td>{tool.model}</td>
+                <td>{tool.serialnumber}</td>
+                <td>${tool.price}/day</td>
+                <td>{tool.zipcode}</td>
+                <td>
+                  <a id='deleteButton' className="waves-effect waves-light btn-small" type='submit' onClick={() => this.handleDelete(tool.id)} rel="nofollow">
+                    <i className="material-icons left">remove</i>Delete
+                  </a>
+                </td>
+              </tr>
+            )}
+          </table>
+        </div>
         <a className="waves-effect waves-light btn add" href='/account/add_tools'>
           <i className="material-icons left">add</i>Add Tools
         </a>
