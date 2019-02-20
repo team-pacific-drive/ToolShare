@@ -34,7 +34,7 @@ class AuthenticatedApp extends React.Component {
           />
           <h1>Member Page</h1>
           <Switch>
-            <Route path='/maps' exact component={GoogleMaps}/>
+            <Route path='/account/maps' exact component={GoogleMaps}/>
             <Route path="/account/my_tools" exact render={(props) =>
               < MyTools currentUserId={currentUser.id}/>}
             />

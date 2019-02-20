@@ -5,18 +5,44 @@
 
   <div class="field">
     <%= f.label :firstname %><br />
-    <%= f.text_field :firstname, autofocus: true %>
+    <%= f.firstname_field :firstname, autofocus: true, autocomplete: "firstname" %>
   </div>
 
   <div class="field">
     <%= f.label :lastname %><br />
-    <%= f.text_field :lastname, autofocus: true %>
+    <%= f.lastname_field :lastname, autofocus: true, autocomplete: "lastname" %>
   </div>
 
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.phone_number_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cross_street %><br />
+    <%= f.cross_street_field :cross_street, autofocus: true, autocomplete: "cross_street" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.city_field :city, autofocus: true, autocomplete: "city" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.state_field :state, autofocus: true, autocomplete: "state" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zip_code %><br />
+    <%= f.zip_code_field :zip_code, autofocus: true, autocomplete: "zip_code" %>
+  </div>
+  
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
+
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
