@@ -1,23 +1,23 @@
-import React from "react"
+import React from 'react'
 import PropTypes from "prop-types"
-
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 import Errors from '../components/Errors'
 
-class NewTools extends React.Component {
+class EditTool extends React.Component{
   constructor(props) {
     super(props)
     this.state = {
+      tools: [],
       message: null,
       errors: null,
       responseOk: false,
       toolAttributes: {
-        title: '',
-        description: '',
-        model: '',
+        title: this.state.toolAttributes.title,
+        description: '' ,
+        model: '' ,
         price: '',
-        serialnumber: '',
+        serialnumber:'' ,
         photo: '',
         zipcode: '',
         user_id: '',
@@ -25,18 +25,28 @@ class NewTools extends React.Component {
     }
   }
 
-  handleSubmit = (event) => {
+  componentDidMount = () => {
+    fetch(`/tools.json`)
+    .then((response) => response.json())
+    .then((tools) => {
+      let filteredTools = tools.filter((tool) => tool.user_id === this.props.currentUserId)
+      this.setState({tools: filteredTools})
+    })
+  }
+
+  handleSubmit = (event, id) => {
     event.preventDefault()
-    console.log("Tool successfully submitted");
-    fetch('/tools.json', {
-      method: 'POST',
+    const { toolAttributes } = this.state
+    // console.log(this.props.id);
+    fetch(`/tools/${id}.json`, {
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({tool: this.state.toolAttributes})
     }).then((response) => {
       return response.json().then((json) => {
-        if(response.status === 201) {
+        if(response.status === 404) {
           this.setState({responseOk: true})
           // console.log(response)
         } else {
@@ -45,7 +55,7 @@ class NewTools extends React.Component {
         return json
       })
     }).catch((errors) => {
-      this.setState({responseOk: false, errors: {"System Error": ["Unknown problem has occurred"]}})
+      this.setState({responseOk: false,  errors: {"System Error": ["Unknown problem has occurred"]}})
     })
   }
 
@@ -55,16 +65,15 @@ class NewTools extends React.Component {
     this.setState({toolAttributes: toolAttributes})
   }
 
-
   render () {
-    const { responseOk, toolAttributes, errors } = this.state
+    const { responseOk, toolAttributes, errors } = this.props
     return (
       <div>
         {responseOk &&
         <Redirect to="/account/my_tools" />
         }
         <Errors errors={errors}/>
-        <h1>List a tool</h1>
+        <h1>Edit a tool</h1>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="title">Title</label>
           <input
@@ -114,7 +123,7 @@ class NewTools extends React.Component {
             value={toolAttributes.zipcode}
             onChange={this.handleChange}
           />
-          <button type="submit">Create</button>
+          <button type="submit">Submit</button>
         </form>
         <a href='/'>Listings</a>
       </div>
@@ -122,4 +131,4 @@ class NewTools extends React.Component {
   }
 }
 
-export default NewTools
+export default EditTool
