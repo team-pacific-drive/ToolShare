@@ -1,0 +1,68 @@
+/* a:link, a:visited {
+  color: white;
+  font-family: 'Muli', sans-serif;
+} */
+
+
+/*
+h2:link, h2:visited, h2:hover {
+  text-decoration: none;
+  color: white;
+} */
+
+.logo{
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.logo-text {
+  margin-left: 12px;
+  font-size: 28pt;
+  font-weight: bold!important;
+  color: white;
+}
+
+.navi-span {
+  background-color: black;
+  text-align: center;
+    color: white;
+}
+
+.navi-container {
+  width: 1156px;
+  height: 70px;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.navi-items {
+}
+
+.navi-element {
+  margin-top: -14px;
+  display: inline-block;
+  font-size: 10pt;
+  font-weight: 400;
+  height: 68px;
+  text-decoration: none;
+  padding-top: 22px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: white;
+  font-family: 'Muli', sans-serif;
+}
+
+.navi-items li:hover {
+  background-color: grey
+}
+
+.toolshare {
+  margin: -40px auto auto 0%;
+  text-align: left;
+  color: white;
+
+}
+
+.toolshare > a > h2 {
+}

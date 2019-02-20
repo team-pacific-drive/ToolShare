@@ -3,7 +3,7 @@
   .detail-img {
     min-width: 450px;
     min-height: 450px;
-    background-color: yellow;
+    background-color: black;
     margin-left: 10%;
   }
 
@@ -20,7 +20,7 @@
   .map {
     height: 220px;
     min-width: 280px;
-    background-color: green;
+    background-color: black;
   }
 
   .detail-inner-container {

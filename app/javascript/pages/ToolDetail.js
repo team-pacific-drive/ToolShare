@@ -23,7 +23,7 @@ class ToolDetail extends React.Component {
           <div>
             <div className="outer-div">
               <div className="detail-img">
-                <p>{tool.photo}</p>
+                <img src={`${tool.photo}`} className="materialboxed" width='450'/>
               </div>
               <div className="detail-container">
                 <div className="top-panel">
