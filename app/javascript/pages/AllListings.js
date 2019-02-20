@@ -33,6 +33,7 @@ class AllListings extends React.Component {
 
         {this.state.tools.map((tool, index) =>
           <Cards key={index}
+            photo={tool.photo}
             title={tool.title}
             price={tool.price}
             zipcode={tool.zipcode}

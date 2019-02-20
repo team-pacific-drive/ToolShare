@@ -6,7 +6,7 @@ const Cards = (props) => {
     <div className="card medium hoverable">
       <a href={`/tool_details/${props.id}`}>
         <div className="card-image">
-          <img src="https://materializecss.com/images/sample-1.jpg"/>
+          <img src={`${props.photo}`}/>
         </div>
         <div className="card-content">
         <span className="card-title custom__title">{props.title}</span>
