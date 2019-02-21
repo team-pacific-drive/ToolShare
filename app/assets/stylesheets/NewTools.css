@@ -1,0 +1,53 @@
+.newtools-container {
+  display: flex;
+  margin-left: 25%;
+}
+
+.newtools-title {
+  font-size: 48pt;
+  font-family: 'Muli', serif;
+  font-weight: 800;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.newtools-form {
+  font-family: 'Muli', serif;
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+form {
+  display: block;
+  margin-right: 30px;
+  width: 80%;
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  width: 700px;
+  height: 36px;
+  background-color: lightgrey;
+  border-style: none none solid none;
+  border-color: darkgrey;
+  border-radius: 4px;
+  margin-right: 40px;
+  margin-bottom: 16px;
+  font-family: 'Muli', serif;
+  font-size: 14pt;
+}
+
+.create-button {
+  height: 40px;
+  width: 100px;
+  padding: 12px 18px 12px 18px;
+  background-color: #B6EAC2;
+  border-radius: 4px;
+  font-family: 'Muli', serif;
+  font-size: 14pt;
+}

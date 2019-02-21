@@ -15,16 +15,16 @@ const NavBar = (props) => {
             </a>
           </div>
           <ul className="navi-items">
-            <a href="/"><li className="navi-element"><b>All Listings</b></li></a>
-            <a href="/account/add_tools"><li className="navi-element"><b>Create Listing</b></li></a>
+            <a href="/"><li className="navi-element"><b>Rent a Tool</b></li></a>
+            <a href="/account/add_tools"><li className="navi-element"><b>Add a Tool</b></li></a>
             {props.firstname  &&
               <a href="/account/my_tools"><li className="navi-element"><b>{props.firstname}'s Tools</b></li></a>
             }
             {!props.firstname  &&
-            <a href="/users/sign_in"><li className="navi-element">Sign In / Sign Up</li></a>
+            <a href="/users/sign_in"><li className="navi-element login-register"><b>Sign In / Join</b></li></a>
             }
             {props.firstname  &&
-            <a href="/users/sign_out"><li className="navi-element">Sign Out</li></a>
+            <a href="/users/sign_out"><li className="navi-element sign-out">Sign Out</li></a>
             }
           </ul>
         </div>

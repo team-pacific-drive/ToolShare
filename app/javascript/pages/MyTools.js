@@ -35,37 +35,34 @@ class MyTools extends React.Component {
   render(){
     return (
       <div className="mytools-container">
-        <h1 className="mytools-title">My Tools</h1>
-        <div className="my-list">
-          <table className="my-list-div" style={{width:'80vw'}}>
-              <tr>
-                <th></th>
-                <th>Item</th>
-                <th>Model</th>
-                <th>Serial Number</th>
-                <th>Price</th>
-                <th>Zip Code</th>
-              </tr>
-              {this.state.tools.map((tool, index) =>
-              <tr key={index}>
-                <td><img src={`${tool.photo}`} height="96" width="96"/></td>
-                <td>{tool.title}</td>
-                <td>{tool.model}</td>
-                <td>{tool.serialnumber}</td>
-                <td>${tool.price}/day</td>
-                <td>{tool.zipcode}</td>
-                <td>
-                  <a id='deleteButton' className="waves-effect waves-light btn-small" type='submit' onClick={() => this.handleDelete(tool.id)} rel="nofollow">
-                    <i className="material-icons left">remove</i>Delete
-                  </a>
-                </td>
-              </tr>
-            )}
-          </table>
-        </div>
-        <a className="waves-effect waves-light btn add" href='/account/add_tools'>
-          <i className="material-icons left">add</i>Add Tools
-        </a>
+        <p className="mytools-title">My Tools</p>
+        <a href='/account/add_tools' className="add-text">Add a Tool</a>
+        <hr></hr>
+        <table align="center" className="mytools-table">
+            <tr>
+              <th></th>
+              <th>Title</th>
+              <th>Make/Model</th>
+              <th>Serial #</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+            {this.state.tools.map((tool, index) =>
+            <tr key={index}>
+              <td width="100"><img src={`${tool.photo}`} height="84" width="84"/></td>
+              <td width="300">{tool.title}</td>
+              <td width="220">{tool.model}</td>
+              <td width="220">{tool.serialnumber}</td>
+              <td width="70" className="price">${tool.price}</td>
+              <td width="100">
+              <a className="edit" type='submit' onClick={() => this.handleEdit(tool.id)} rel="nofollow">Edit</a>
+              </td>
+              <td width="100">
+                <a className="delete" type='submit' onClick={() => this.handleDelete(tool.id)} rel="nofollow">Remove</a>
+              </td>
+            </tr>
+          )}
+        </table>
       </div>
     );
   }
