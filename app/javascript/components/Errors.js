@@ -9,12 +9,12 @@ class Errors extends React.Component{
     return(
       <div>
         {errors &&
-          <div>
-            <h2>Errors</h2>
-            <ul>
+          <div className="error-div">
+            <h2 className="error-header">Errors:</h2>
+            <ul className="error-list">
               {Object.keys(errors).map((key, index) => {
                 return (
-                  <li key={index}>
+                  <li className="error-text" key={index}>
                     {key}
                     {" "}
                     {errors[key].join(', ')}
