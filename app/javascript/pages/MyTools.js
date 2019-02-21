@@ -34,37 +34,40 @@ class MyTools extends React.Component {
 
   render(){
     return (
-      <div className="mytools-container">
-        <p className="mytools-title">My Tools</p>
-        <a href='/account/add_tools' className="add-text">Add a Tool</a>
-        <hr className="mytools-hr"></hr>
-        <table align="center" className="mytools-table">
-            <tr>
-              <th></th>
-              <th>Title</th>
-              <th>Make/Model</th>
-              <th>Serial #</th>
-              <th>Price</th>
-              <th></th>
-            </tr>
-            {this.state.tools.map((tool, index) =>
-            <tr key={index}>
-              <td width="100"><img src={`${tool.photo}`} height="74" width="74"/></td>
-              <td width="300">{tool.title}</td>
-              <td width="220" className="model">{tool.model}</td>
-              <td width="220" className="serial">{tool.serialnumber}</td>
-              <td width="70" className="price">${tool.price}</td>
-              <td width="100">
-              <a className="edit" type='submit' onClick={() => this.handleEdit(tool.id)} rel="nofollow"><b>Edit</b></a>
-              </td>
-              <td width="100">
-                <a className="delete" type='submit' onClick={() => this.handleDelete(tool.id)} rel="nofollow"><b>Remove</b></a>
-              </td>
-            </tr>
-          )}
-        </table>
-        <hr className="mytools-hr"></hr>
+      <div>
+        <div className="mytools-wrap">
+          <div className="mytools-header">
+            <p className="mytools-title">My Tools</p>
+            <p className="add-text"><a href='/account/add_tools'>Add a Tool</a></p>
+          </div>
+        </div>
+        <div className="mytools-container">
+          <hr className="mytools-hr"></hr>
+          <table align="center" className="mytools-table">
+              <tr>
+                <th className="th-img" ></th>
+                <th className="th-title">Title</th>
+                <th className="th-make">Make/Model</th>
+                <th className="th-price">Price</th>
+                <th className="th-edit"></th>
+              </tr>
+              {this.state.tools.map((tool, index) =>
+              <tr key={index}>
+                <td><img src={`${tool.photo}`} height="74" width="74"/></td>
+                <td>{tool.title}</td>
+                <td className="model">(Make) {tool.model}</td>
+                <td className="price">${tool.price}</td>
+                <td className="edit-delete">
+                  <a className="edit" type='submit' onClick={() => this.handleEdit(tool.id)} rel="nofollow"><b>Edit</b></a>
+                  <a className="delete" type='submit' onClick={() => this.handleDelete(tool.id)} rel="nofollow"><b>X</b></a>
+                </td>
+              </tr>
+            )}
+          </table>
+          <hr className="mytools-hr"></hr>
+        </div>
       </div>
+
     );
   }
 }

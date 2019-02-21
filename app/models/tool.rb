@@ -3,7 +3,6 @@ class Tool < ApplicationRecord
 
   delegate :firstname, :lastname, to: :user, prefix: true
 
-  validates :title, :model, :description, :zipcode, :price, presence: true
+  validates :title, :model, :description, :price, presence: true
   validates :description, length: { maximum: 144 }
-  validates :zipcode, length: { minimum: 5 }
 end
