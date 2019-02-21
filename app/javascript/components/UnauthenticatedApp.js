@@ -10,6 +10,7 @@ import NavBar from "./NavBar"
 import AllListings from "../pages/AllListings"
 import ToolDetail from '../pages/ToolDetail'
 import NotFound from '../pages/NotFound'
+import AboutPage from '../pages/AboutPage'
 
 class UnauthenticatedApp extends React.Component {
   state = {
@@ -34,6 +35,7 @@ class UnauthenticatedApp extends React.Component {
           <Switch>
             <Route path='/' exact component={AllListings}/>
             <Route path="/tool_details/:id" exact component={ToolDetail}/>
+            <Route path='/about' exact component={AboutPage} />
             <Route path='/' component={NotFound} />
           </Switch>
         </div>

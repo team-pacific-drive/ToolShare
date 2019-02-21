@@ -19,6 +19,7 @@ const NavBar = (props) => {
           {props.firstname  &&
           <li><a href="/users/sign_out">Sign Out</a></li>
           }
+          <li><a href="/about">About</a></li>
         </ul>
         {props.firstname  &&
         <ul id="nav-mobile" className="right hide-on-med-and-down">
