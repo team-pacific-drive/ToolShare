@@ -1,6 +1,6 @@
 class Tool < ApplicationRecord
   belongs_to :user
-  delegate :firstname, :lastname, to: :user, prefix: true, allow_nil: true
+  delegate :firstname, :lastname, to: :user, prefix: true
 
   validates :title, :model, :description, :zipcode, :price, presence: true
   validates :description, length: { maximum: 144 }
