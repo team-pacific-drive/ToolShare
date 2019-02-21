@@ -1,24 +1,157 @@
-@media (min-width: 600px) {
+
+@media (min-width: 700px) {
   .detail-img {
-    width: 400px;
-    height: 400px;
-    background-color: yellow;
+    min-width: 450px;
+    min-height: 450px;
+    margin-left: 10%;
   }
-}
-@media (max-width: 599px) {
-  .detail-img {
+
+  .outer-div {
+    display: flex;
+  }
+
+  .detail-container {
+    margin: auto 10% auto 5%;
+    height: 450px;
+    width: 800px;
+  }
+
+  .map {
+    height: 220px;
+    min-width: 280px;
+    background-color: black;
+  }
+
+  .detail-inner-container {
+    width: 65%;
+    margin-top: 0px;
+  }
+
+  .hr {
     width: 100%;
-    padding-top: 100%;
-    background-color: lightyellow;
+    margin-top: -10px;
+    color: black;
   }
 }
 
-.detail-desc {
-  width: 90%;
-  font-size: 18pt;
+@media screen
+  and (min-width: 700px)
+  and (max-width: 1124px) {
+
+  .map {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    background-color: pink;
+  }
+
+  .detail-img{
+  }
+
+  #bottom-panel {
+    display: flex;
+  }
+
+  .detail-inner-container, .map {
+    display: block;
+  }
 }
 
 .detail-text {
-  width: 90%;
+  width: 100%;
   font-size: 12pt;
+  font-family: 'Muli', sans-serif;
+}
+
+#title {
+  font-size: 32pt;
+  margin-top: 0%;
+  font-family: 'Muli', serif;
+  font-weight: 800;
+}
+
+#model {
+  margin-top: -20px;
+  font-size: 14pt;
+  font-style: italic;
+  font-family: 'Muli', sans-serif;
+}
+
+#description {
+  font-size: 12pt;
+  margin-bottom: 30px;
+  font-family: 'Muli', sans-serif;
+  height: 94px;
+}
+
+#serial {
+  font-size: 10pt;
+  color: navy;
+  font-family: 'Muli', sans-serif;
+}
+
+#bottom-panel {
+  display: flex;
+}
+
+#price {
+  font-size: 36pt;
+  color: darkgreen;
+  margin-bottom: -20px;
+  font-family: 'Muli', serif;
+}
+
+#price-text {
+  margin-top: -25px;
+  font-size: 16pt;
+}
+
+#price, #price-text {
+  display: inline;
+}
+
+#zip {
+}
+
+.contact-button {
+  width: 95%;
+  font-family: 'Muli', serif;
+  font-size: 14pt;
+  background-color: lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+}
+
+.detail-inner-container {
+  margin-top: -20px;
+
+}
+
+@media (max-width: 699px) {
+  .detail-img {
+    width: 100%;
+    padding-top: 100%;
+    background-color: orange;
+  }
+
+  .top-panel {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  .detail-text {
+    max-width: 90%;
+    text-align: justify;
+  }
+
+  #title, #model, #description {
+    text-align: center;
+  }
+
+  .tooldetail-hr {
+    width: 90%;
+    margin-top: -10px;
+    color: black;
+  }
 }

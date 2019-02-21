@@ -1,33 +1,34 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Logo from './../../assets/images/logo2.svg'
 
 const NavBar = (props) => {
   return(
-    <nav>
-      <div className="nav-wrapper">
-        <a href="#" className="brand-logo center">ToolShare</a>
-        <ul id="nav-mobile" className="left hide-on-med-and-down">
-          <li><a href="/">All Listings</a></li>
-          <li><a href="/account/add_tools">Add Listings</a></li>
-          <li><a href="/account/my_tools">My Tools</a></li>
-          {!props.firstname  &&
-          <li><a href="/users/sign_in">Sign In</a></li>
-          }
-          {!props.firstname  &&
-          <li><a href="/users/sign_up">Sign Up</a></li>
-          }
-          {props.firstname  &&
-          <li><a href="/users/sign_out">Sign Out</a></li>
-          }
-          <li><a href="/about">About</a></li>
-        </ul>
-        {props.firstname  &&
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><a href="" className='right'>Welcome {props.firstname} {props.lastNameInitial}.!</a></li>
-        </ul>
-        }
+      <div className="navi-span">
+        <div className="navi-container">
+          <div className="toolshare">
+            <a href="/">
+              <div className="logo">
+                <img src={Logo} height="32" width="32" />
+                <p className="logo-text">ToolShare</p>
+              </div>
+            </a>
+          </div>
+          <ul className="navi-items">
+            <a href="/"><li className="navi-element"><b>Rent a Tool</b></li></a>
+            <a href="/account/add_tools"><li className="navi-element"><b>Add a Tool</b></li></a>
+            {props.firstname  &&
+              <a href="/account/my_tools"><li className="navi-element"><b>{props.firstname}'s Tools</b></li></a>
+            }
+            {!props.firstname  &&
+            <a href="/users/sign_in"><li className="navi-element login-register"><b>Sign In / Join</b></li></a>
+            }
+            {props.firstname  &&
+            <a href="/users/sign_out"><li className="navi-element sign-out">Sign Out</li></a>
+            }
+          </ul>
+        </div>
       </div>
-    </nav>
   )
 }
 
