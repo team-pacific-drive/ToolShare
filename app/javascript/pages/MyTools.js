@@ -1,6 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import {
+  Link
+} from 'react-router-dom'
+
+import EditTool from './EditTool'
+
 class MyTools extends React.Component {
   state = {
     tools: [],
@@ -61,6 +67,11 @@ class MyTools extends React.Component {
 
                 <a className="delete" type='submit' data-confirm="Are you sure you want to delete this item?" onClick={() => this.handleDelete(tool.id)} rel="nofollow">Remove</a>
 
+              </td>
+              <td>
+                <Link to={`/account/edit_tool/${tool.id}`} id='editButton'className="waves-effect waves-light btn-small" type='submit'>
+                <i className="material-icons left" >edit</i>Edit Tool
+                </Link>
               </td>
             </tr>
           )}
