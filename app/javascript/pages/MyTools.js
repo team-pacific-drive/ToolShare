@@ -58,7 +58,9 @@ class MyTools extends React.Component {
               <a className="edit" type='submit' onClick={() => this.handleEdit(tool.id)} rel="nofollow"><b>Edit</b></a>
               </td>
               <td width="100">
-                <a className="delete" type='submit' onClick={() => this.handleDelete(tool.id)} rel="nofollow"><b>Remove</b></a>
+
+                <a className="delete" type='submit' data-confirm="Are you sure you want to delete this item?" onClick={() => this.handleDelete(tool.id)} rel="nofollow">Remove</a>
+
               </td>
             </tr>
           )}
