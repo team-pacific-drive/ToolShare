@@ -58,7 +58,7 @@ td {
   font-size: 11pt;
 }
 
-hr {
+.mytools-hr {
   width: 1024px;
   margin-top: 30px;
 }
@@ -66,4 +66,15 @@ hr {
 .price {
   color: forestgreen;
   font-weight: bold;
+  font-size: 16pt;
 }
+
+/* .model, .serial {
+  font-style: italic;
+} */
+/* tr {
+  margin: 0;
+}
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF} */

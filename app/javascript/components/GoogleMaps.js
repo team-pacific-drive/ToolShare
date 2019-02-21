@@ -34,7 +34,7 @@ class GoogleMaps extends React.Component {
 
 //Put this Geocode in function with arguement inside ToolDetail, then put turn into prop and pass down zipcode--later cross st--and put that func into compDidMnt
   componentDidMount() {
-    Geocode.fromAddress('3358 31st San Diego, CA')
+    Geocode.fromAddress('J St and Seventh Ave, San Diego, CA')
     .then(response => {
       const { lat, lng } = response.results[0].geometry.location
       console.log( 'lat & lng', lat, lng );
