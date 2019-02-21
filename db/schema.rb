@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_194329) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.string "firstname"
     t.string "lastname"
     t.string "cross_street"
@@ -46,6 +47,16 @@ ActiveRecord::Schema.define(version: 2019_02_20_194329) do
     t.string "state"
     t.string "zip_code"
     t.string "phone_number"
+=======
+    t.string "firstname", null: false
+    t.string "lastname", null: false
+    t.string "cross_street", null: false
+    t.string "city", null: false
+    t.string "state", null: false
+    t.integer "zip_code", null: false
+    t.integer "phone_number", null: false
+
+>>>>>>> 659d84b8fa82ea99293e74efa0e5d9c35d7c14fc
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
