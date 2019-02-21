@@ -6,7 +6,6 @@ class Errors extends React.Component{
   render(){
 
     const { errors } = this.props
-    console.log('sadfhlas', errors);
     return(
       <div>
         {errors &&

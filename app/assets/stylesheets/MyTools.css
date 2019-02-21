@@ -1,0 +1,69 @@
+.mytools-container {
+  align-items: center;
+  text-align: center;
+}
+
+
+.add-text {
+  height: 40px;
+  width: 100px;
+  padding: 12px 18px 12px 18px;
+  text-align: center;
+  background-color: #B6EAC2;
+  border-radius: 4px;
+}
+
+.mytools-table {
+  text-align: left;
+  width: 1024px;
+  margin-top: 20px;
+}
+
+.mytools-title {
+  font-size: 48pt;
+  font-family: 'Muli', serif;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.edit {
+  padding: 12px 18px 12px 18px;
+  background-color: #B8D0EB;
+  border-radius: 4px;
+}
+
+
+.delete {
+  padding: 12px 18px 12px 18px;
+  background-color: #EAB6B6;
+  border-radius: 4px;
+  margin-left: -28px;
+  margin-right: 0px;
+}
+
+
+
+th, td {
+  font-family: 'Muli', serif;
+}
+
+th {
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+td {
+  font-size: 11pt;
+}
+
+hr {
+  width: 1024px;
+  margin-top: 30px;
+}
+
+.price {
+  color: forestgreen;
+  font-weight: bold;
+}

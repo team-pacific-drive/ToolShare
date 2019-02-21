@@ -17,3 +17,11 @@
 .custom__title {
   text-transform: uppercase;
 }
+
+.alllistings-title {
+  font-size: 48pt;
+  font-family: 'Muli', serif;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+}

@@ -1,3 +1,48 @@
-.text {
+a:link, a:visited {
+  text-decoration: none;
   color: black;
+  font-family: 'Muli', sans-serif;
+
+}
+
+
+
+
+.card-container {
+  width: 250px;
+  height: 250px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.card-image {
+  width: 245px;
+  height: 245px;
+}
+
+
+.card-title {
+  font-size: 18pt;
+}
+
+.card-model {
+  font-size: 11pt;
+  font-style: italic;
+}
+
+
+.card-price {
+  font-size: 14pt;
+}
+
+.card-price-container {
+  padding: 5px;
+  background-color: lightgrey;
+  border-radius: 5px;
 }
