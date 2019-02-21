@@ -4,41 +4,6 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :firstname %><br />
-    <%= f.text_field :firstname, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :lastname %><br />
-    <%= f.text_field :lastname, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :phone_number %><br />
-    <%= f.phone_number_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :cross_street %><br />
-    <%= f.cross_street_field :cross_street, autofocus: true, autocomplete: "cross_street" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :city %><br />
-    <%= f.city_field :city, autofocus: true, autocomplete: "city" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :state %><br />
-    <%= f.state_field :state, autofocus: true, autocomplete: "state" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :zip_code %><br />
-    <%= f.zip_code_field :zip_code, autofocus: true, autocomplete: "zip_code" %>
-  </div>
-  
-  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -56,6 +21,40 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.phone_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cross_street %><br />
+    <%= f.text_field :cross_street, autofocus: true, autocomplete: "cross_street" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city, autofocus: true, autocomplete: "city" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state, autofocus: true, autocomplete: "state" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zip_code %><br />
+    <%= f.number_field :zip_code, autofocus: true, autocomplete: "zip_code" %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
