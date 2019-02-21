@@ -1,10 +1,7 @@
 import React from 'react'
 
 class Errors extends React.Component{
-
-
   render(){
-
     const { errors } = this.props
     return(
       <div>

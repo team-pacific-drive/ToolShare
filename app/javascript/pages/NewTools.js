@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 import Errors from '../components/Errors'
 
@@ -54,6 +54,16 @@ class NewTools extends React.Component {
     toolAttributes[event.target.name] = event.target.value
     this.setState({toolAttributes: toolAttributes})
   }
+
+
+// Used delegate in model instead
+// handleChange = (event) => {
+//   const { toolAttributes } = this.state
+//   toolAttributes[event.target.name] = event.target.value
+//   let addUserNames = { user_firstname: this.props.firstname, user_lastname: this.props.lastname }
+//   let newToolAttributes = {...toolAttributes, ...addUserNames}
+//   this.setState({toolAttributes: newToolAttributes})
+// }
 
   render () {
     const { responseOk, toolAttributes, errors } = this.state
