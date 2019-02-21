@@ -1,53 +1,113 @@
 .newtools-container {
   display: flex;
-  margin-left: 25%;
+  justify-content: center;
+}
+
+.form-container {
+  font-family: 'Muli', serif;
+  font-size: 11pt;
+  font-weight: bold;
+  width: 700px;
+
 }
 
 .newtools-title {
   font-size: 48pt;
   font-family: 'Muli', serif;
   font-weight: 800;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 20px;
-
+  margin-bottom: -40px;
 }
 
-.newtools-form {
+.newtools-header {
+  display: inline;
+}
+
+.required-asterisk {
   font-family: 'Muli', serif;
-  font-size: 11pt;
-  font-weight: bold;
+  font-size: 10pt;
+  color: red;
+  display: inline;
+  margin: 0px;
 }
 
-form {
-  display: block;
-  margin-right: 30px;
-  width: 80%;
+.required-text {
+  font-family: 'Muli', serif;
+  font-size: 10pt;
+  text-align: right;
+  align-items: baseline;
+  margin-bottom: -10px;
+}
+
+
+.newtools-hr {
+  width: 700px;
+  margin-left: 0px;
+  margin-top: 30px;
+}
+
+.form {
+  align-items: center;
 }
 
 input:focus {
   outline: none;
 }
 
-input {
-  width: 700px;
-  height: 36px;
+.input, .input-description, .input-small, .input-extra-small {
   background-color: lightgrey;
   border-style: none none solid none;
+  border-width: 2px;
   border-color: darkgrey;
   border-radius: 4px;
-  margin-right: 40px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-family: 'Muli', serif;
   font-size: 14pt;
 }
 
+.input {
+  height: 36px;
+  width: 700px;
+}
+
+.input-small {
+  width: 340px;
+  height: 36px;
+}
+
+.input-extra-small {
+  width: 160px;
+  height: 36px;
+}
+
+.input-description {
+  height: 60px;
+  width: 700px;
+}
+
+.make, .model, .serial, .deposit {
+  display: inline;
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+.make-model, .serial-price-deposit  {
+  display: flex;
+  margin-bottom: -16px;
+}
+
+.price-form {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .create-button {
-  height: 40px;
-  width: 100px;
-  padding: 12px 18px 12px 18px;
+  height: 42px;
+  margin-top: 10px;
+  padding: 10px 18px 12px 18px;
   background-color: #B6EAC2;
   border-radius: 4px;
   font-family: 'Muli', serif;
   font-size: 14pt;
+  font-weight: bold;
 }

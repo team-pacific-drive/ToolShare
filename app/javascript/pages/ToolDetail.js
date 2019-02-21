@@ -29,7 +29,7 @@ class ToolDetail extends React.Component {
                 <div className="top-panel">
                   <h1 id="title">{tool.title}</h1>
                   <p className="detail-text" id="model">{tool.model}</p>
-                  <hr className="hr"></hr>
+                  <hr className="tooldetail-hr"></hr>
                   <p className="detail-text" id="description">{tool.description}</p>
                 </div>
                 <div id="bottom-panel">
