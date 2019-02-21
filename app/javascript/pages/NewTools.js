@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 import Errors from '../components/Errors'
 
@@ -55,6 +55,7 @@ class NewTools extends React.Component {
     this.setState({toolAttributes: toolAttributes})
   }
 
+
 // Used delegate in model instead
 // handleChange = (event) => {
 //   const { toolAttributes } = this.state
@@ -66,100 +67,118 @@ class NewTools extends React.Component {
 
   render () {
     const { responseOk, toolAttributes, errors } = this.state
+    const asteriskStyle = {color: "red"}
     return (
-      <div className='row'>
-        {responseOk &&
-        <Redirect to="/account/my_tools" />
-        }
-        <Errors errors={errors}/>
-        <h1>List a tool</h1>
-        <form onSubmit={this.handleSubmit}>
-          <div className="input-field col s6">
-            <input
-              className="validate"
-              type="text"
-              id="title"
-              name='title'
-              value={toolAttributes.title}
-              onChange={this.handleChange}
-            />
-            <label for="title">Title</label>
-          </div>
-          <div className="input-field col s6">
-            <textarea
-              id='textarea2'
-              className='materialize-textarea'
-              data-length="144"
-              type="text"
-              name='description'
-              value={toolAttributes.description}
-              onChange={this.handleChange}
-            ></textarea>
-            <label for="textarea2">Description</label>
-          </div>
-          <div className="input-field col s6">
-            <input
-              className="validate"
-              type="text"
-              id="model"
-              name='model'
-              value={toolAttributes.model}
-              onChange={this.handleChange}
-            />
-            <label for="model">Model</label>
-          </div>
-          <div className="input-field col s6">
-            <input
-              className="validate"
-              type="number"
-              id="price"
-              name='price'
-              value={toolAttributes.price}
-              onChange={this.handleChange}
-            />
-            <label for="price">Price</label>
-          </div>
-          <div className="input-field col s6">
-            <input
-              className="validate"
-              type="text"
-              id="serialnumber"
-              name='serialnumber'
-              value={toolAttributes.serialnumber}
-              onChange={this.handleChange}
-            />
-            <label for="serialnumber">Serial Number</label>
-          </div>
-          <div className="file-field input-field col s6">
-            <div className='btn'>
-              <span>Pic</span>
-              <input type='file'/>
-            </div>
-            <div className='file-path-wrapper'>
+      <div className="newtools-container">
+        <div className="form-container">
+          {responseOk &&
+          <Redirect to="/account/my_tools" />
+          }
+          <Errors errors={errors}/>
+          <p className="newtools-title">Add a Tool</p>
+          <p className="required-text"><span style={asteriskStyle}>*</span> = Required Field</p>
+          <hr className="newtools-hr"></hr>
+          <br></br>
+          <div className="form">
+            <form onSubmit={this.handleSubmit}>
+              <label htmlFor="title">Title<p className="required-asterisk">*</p></label>
+              <br></br>
               <input
-                className="validate"
+                className="input"
                 type="text"
-                name='photo'
-                placeholder='/User/Me/myTool.jpg'
+                name="title"
+                value={toolAttributes.title}
+                onChange={this.handleChange}
+              />
+              <br></br>
+              <label htmlFor="description">Description<p className="required-asterisk">*</p></label>
+              <br></br>
+              <input
+                className="input-description"
+                type="text" rows="3"
+                name="description"
+                value={toolAttributes.description}
+                onChange={this.handleChange}
+              />
+              <br></br>
+              <div className="make-model">
+                <div className="make">
+                  <label htmlFor="make">Make<p className="required-asterisk">*</p></label>
+                  <br></br>
+                  <input
+                    className="input-small"
+                    type="text"
+                    name="make"
+                    value={""}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <br></br>
+                <div className="model">
+                  <label htmlFor="model">Model<p className="required-asterisk">*</p></label>
+                  <br></br>
+                  <input
+                    className="input-small"
+                    type="text"
+                    name="model"
+                    value={toolAttributes.model}
+                    onChange={this.handleChange}
+                  />
+                </div>
+              </div>
+              <br></br>
+              <div className="serial-price-deposit">
+                <div className="serialnumber">
+                  <label htmlFor="serialnumber">Serial #</label>
+                  <br></br>
+                  <input
+                    className="input-small"
+                    type="text"
+                    name="serialnumber"
+                    value={toolAttributes.serialnumber}
+                    onChange={this.handleChange}
+                  />
+                  <br></br>
+                </div>
+                <div className="price-form">
+                  <label htmlFor="priceset">Price (Per Day)<p className="required-asterisk">*</p></label>
+                  <br></br>
+                  <input
+                    className="input-extra-small"
+                    type="number"
+                    name="priceset"
+                    value={toolAttributes.price}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <br></br>
+                <div className="deposit">
+                  <label htmlFor="deposit">Deposit<p className="required-asterisk">*</p></label>
+                  <br></br>
+                  <input
+                    className="input-extra-small"
+                    type="number"
+                    name="deposit"
+                    value={""}
+                    onChange={this.handleChange}
+                  />
+                </div>
+              </div>
+              <br></br>
+              <label htmlFor="photo">Photo URL</label>
+              <br></br>
+              <input
+                className="input"
+                type="url"
+                name="photo"
                 value={toolAttributes.photo}
                 onChange={this.handleChange}
               />
-            </div>
+              <br></br>
+              <button type="submit" className="create-button">Create</button>
+            </form>
           </div>
-          <div className="input-field col s6">
-            <input
-              className="validate"
-              type="number"
-              id="zipcode"
-              name='zipcode'
-              value={toolAttributes.zipcode}
-              onChange={this.handleChange}
-            />
-            <label for="zipcode">Zip Code</label>
-          </div>
-          <button type="submit">Create</button>
-        </form>
-        <a href='/'>Listings</a>
+        </div>
       </div>
     );
   }

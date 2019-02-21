@@ -1,0 +1,22 @@
+.error-div {
+  width: 700px;
+  border-radius: 6px;
+  background-color: #EAB6B6;
+  padding: 1px 4px 1px 4px;
+  margin-top: 20px;
+  margin-bottom: -30px;
+}
+
+.error-header {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+.error-text {
+  font-size: 11pt;
+  color: red;
+}
+
+.error-list {
+  margin-top: -14px;
+}

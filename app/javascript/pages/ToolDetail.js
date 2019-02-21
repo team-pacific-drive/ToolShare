@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from 'react-router-dom'
 
 class ToolDetail extends React.Component {
   state = {
@@ -20,17 +21,31 @@ class ToolDetail extends React.Component {
       <div>
         {this.state.tool &&
           <div>
-            <h1>{tool.title}</h1>
-            <div className="detail-img"><p>{tool.photo}</p></div>
-            <p className="detail-desc">{tool.description}</p>
-            <p className="detail-text">{tool.model}</p>
-            <p className="detail-text">{tool.serialnumber}</p>
-            <p className="detail-text">${tool.price}/day</p>
-            <p className="detail-text">Zip Code: {tool.zipcode}</p>
+            <div className="outer-div">
+              <div className="detail-img">
+                <img src={`${tool.photo}`} className="materialboxed" width='450'/>
+              </div>
+              <div className="detail-container">
+                <div className="top-panel">
+                  <h1 id="title">{tool.title}</h1>
+                  <p className="detail-text" id="model">{tool.model}</p>
+                  <hr className="tooldetail-hr"></hr>
+                  <p className="detail-text" id="description">{tool.description}</p>
+                </div>
+                <div id="bottom-panel">
+                  <div className="detail-inner-container">
+                    <p className="detail-text" id="price-text">$</p><p className="detail-text" id="price"><b>{tool.price}</b></p><p className="detail-text" id="price-text">/day</p>
+                    <p className="detail-text">With $100 deposit</p>
+                    <p className="detail-text" id="zip"><b>San Diego, CA</b> {tool.zipcode}</p>
+                    <button className="contact-button">Contact Info</button>
+                  </div>
+                  <div className="map"></div>
+                </div>
+              </div>
+            </div>
           </div>
         }
-        <a className="waves-effect waves-light btn" href='/'>Back to Listings
-        </a>
+        <Link to="/my_tools">Back to My Listings</Link>
       </div>
     );
   }

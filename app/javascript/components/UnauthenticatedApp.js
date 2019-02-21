@@ -30,7 +30,6 @@ class UnauthenticatedApp extends React.Component {
             firstname={currentUser.firstname}
             lastNameInitial={this.nameInitial()}
           />
-          <h1>Guest page</h1>
           <Switch>
             <Route path='/' exact component={AllListings}/>
             <Route path="/tool_details/:id" exact component={ToolDetail}/>
