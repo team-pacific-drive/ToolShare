@@ -3,7 +3,6 @@
   .detail-img {
     min-width: 450px;
     min-height: 450px;
-    background-color: black;
     margin-left: 10%;
   }
 
@@ -47,7 +46,6 @@
   }
 
   .detail-img{
-    background-color: blue;
   }
 
   #bottom-panel {
