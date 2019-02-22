@@ -31,7 +31,8 @@ const NavBar = (props) => {
             <a href="/users/sign_in"><li className="navi-element login-register"><b>Sign In / Join</b></li></a>
             }
             {props.firstname  &&
-            <a href="/users/sign_out"><li className="navi-element sign-out">Sign Out</li></a>
+            <a href="/users/sign_out" rel="nofollow" data-method="delete"><li className="navi-element sign-out"><b>Sign Out</b></li></a>
+            // <a rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</a>
             }
           </ul>
         </div>
