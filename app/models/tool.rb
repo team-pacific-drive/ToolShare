@@ -4,4 +4,5 @@ class Tool < ApplicationRecord
 
   validates :title, :model, :description, :price, presence: true
   validates :description, length: { maximum: 144 }
+
 end
