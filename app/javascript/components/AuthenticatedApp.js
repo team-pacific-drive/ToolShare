@@ -12,10 +12,11 @@ import GoogleMaps from './GoogleMaps'
 
 import MyTools from '../pages/MyTools'
 import NewTools from '../pages/NewTools'
+import EditTool from '../pages/EditTool'
 
 class AuthenticatedApp extends React.Component {
   state = {
-    currentUser: this.props.current_user,
+    currentUser: this.props.current_user
   }
 
   nameInitial = () => {
@@ -33,13 +34,14 @@ class AuthenticatedApp extends React.Component {
             lastNameInitial={this.nameInitial()}
           />
           <Switch>
-            <Route path='/maps' exact component={GoogleMaps}/>
+            <Route path='/account/maps' exact component={GoogleMaps}/>
             <Route path="/account/my_tools" exact render={(props) =>
               < MyTools currentUserId={currentUser.id}/>}
             />
             <Route path='/account/add_tools' exact render={(props) =>
               < NewTools />}
             />
+            <Route path='/account/edit_tool/:id' exact component={EditTool}/>
           </Switch>
         </div>
       </Router>

@@ -1,6 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import {
+  Link
+} from 'react-router-dom'
+
+import EditTool from './EditTool'
+
 class MyTools extends React.Component {
   state = {
     tools: [],
@@ -58,8 +64,8 @@ class MyTools extends React.Component {
                 <td className="model">(Make) {tool.model}</td>
                 <td className="price">${tool.price}</td>
                 <td className="edit-delete">
-                  <a className="edit" type='submit' onClick={() => this.handleEdit(tool.id)} rel="nofollow"><b>Edit</b></a>
-                  <a className="delete" type='submit' onClick={() => this.handleDelete(tool.id)} rel="nofollow"><b>X</b></a>
+                  <a className="edit" type='submit' href={`/account/edit_tool/${tool.id}`} rel="nofollow"><b>Edit</b></a>
+                  <a className="delete" type='submit' data-confirm="Are you sure you want to delete this item?" onClick={() => this.handleDelete(tool.id)} rel="nofollow"><b>X</b></a>
                 </td>
               </tr>
             )}

@@ -41,6 +41,7 @@ class ToolsController < ApplicationController
   # PATCH/PUT /tools/1
   # PATCH/PUT /tools/1.json
   def update
+    @tool = current_user.tools.find(params[:id])
     respond_to do |format|
       if @tool.update(tool_params)
         format.html { redirect_to @tool, notice: 'Tool was successfully updated.' }
@@ -70,6 +71,6 @@ class ToolsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tool_params
-      params.require(:tool).permit(:title, :description, :model, :price, :serialnumber, :photo, :zipcode, :user_id)
+      params.require(:tool).permit(:title, :description, :model, :price, :serialnumber, :photo, :user_id)
     end
 end
