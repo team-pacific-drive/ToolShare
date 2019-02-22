@@ -10,9 +10,13 @@ import {
 import NavBar from './NavBar'
 import GoogleMaps from './GoogleMaps'
 
+import AllListings from '../pages/AllListings'
 import MyTools from '../pages/MyTools'
 import NewTools from '../pages/NewTools'
 import EditTool from '../pages/EditTool'
+import ToolDetail from '../pages/ToolDetail'
+import NotFound from '../pages/NotFound'
+import AboutPage from '../pages/AboutPage'
 
 class AuthenticatedApp extends React.Component {
   state = {
@@ -34,6 +38,9 @@ class AuthenticatedApp extends React.Component {
             lastNameInitial={this.nameInitial()}
           />
           <Switch>
+            <Route path='/' exact component={AllListings}/>
+            <Route path="/tool_details/:id" exact component={ToolDetail}/>
+            <Route path='/about' exact component={AboutPage} />
             <Route path='/account/maps' exact component={GoogleMaps}/>
             <Route path="/account/my_tools" exact render={(props) =>
               < MyTools currentUserId={currentUser.id}/>}
@@ -42,6 +49,7 @@ class AuthenticatedApp extends React.Component {
               < NewTools />}
             />
             <Route path='/account/edit_tool/:id' exact component={EditTool}/>
+            <Route path='/' component={NotFound} />
           </Switch>
         </div>
       </Router>
