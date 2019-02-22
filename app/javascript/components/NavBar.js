@@ -15,6 +15,7 @@ const NavBar = (props) => {
             </a>
           </div>
           <ul className="navi-items">
+            <a href="/about"><li className="navi-element sign-out"><b>About</b></li></a>
             <a href="/"><li className="navi-element"><b>Rent a Tool</b></li></a>
             <a href="/account/add_tools"><li className="navi-element"><b>Add a Tool</b></li></a>
             {props.firstname  &&
