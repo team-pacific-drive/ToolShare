@@ -6,24 +6,21 @@ import { Redirect } from 'react-router-dom'
 import Errors from '../components/Errors'
 
 class NewTools extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      message: null,
-      errors: null,
-      responseOk: false,
-      toolAttributes: {
-        title: '',
-        description: '',
-        model: '',
-        price: '',
-        serialnumber: '',
-        photo: '',
-        user_id: '',
-        brand: '',
-        deposit: '',
-      },
-    }
+  state = {
+    message: null,
+    errors: null,
+    responseOk: false,
+    toolAttributes: {
+      title: '',
+      description: '',
+      model: '',
+      price: '',
+      serialnumber: '',
+      photo: '',
+      brand: '',
+      deposit: '',
+      user_id: '',
+    },
   }
 
   handleSubmit = (event) => {
