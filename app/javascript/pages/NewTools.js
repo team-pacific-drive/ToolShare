@@ -115,7 +115,7 @@ class NewTools extends React.Component {
                   />
                 </div>
                 <br></br>
-                <div className="model">
+                <div className="model-form">
                   <label htmlFor="model">Model<p className="required-asterisk">*</p></label>
                   <br></br>
                   <input
@@ -129,7 +129,7 @@ class NewTools extends React.Component {
               </div>
               <br></br>
               <div className="serial-price-deposit">
-                <div className="serialnumber">
+                <div className="serial-form">
                   <label htmlFor="serialnumber">Serial #</label>
                   <br></br>
                   <input
