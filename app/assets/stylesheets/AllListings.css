@@ -1,4 +1,4 @@
-.listings__container {
+/* .listings__container {
   width: 80%;
   margin-left: 10%;
   display: flex;
@@ -16,12 +16,27 @@
 
 .custom__title {
   text-transform: uppercase;
-}
+} */
 
 .alllistings-title {
   font-size: 48pt;
   font-family: 'Muli', serif;
   font-weight: 800;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #31333D;
+  text-align: left;
+  width: 350px;
+}
+
+
+.all-add-text {
+  margin-left: 231px;
+  margin-top: 25px;
+  padding: 12px 18px 12px 18px;
   text-align: center;
-  margin-bottom: 20px;
+  background-color: #B6EAC2;
+  border-radius: 4px;
+  font-weight: bold;
+  width: auto;
 }
