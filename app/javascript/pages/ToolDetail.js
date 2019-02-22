@@ -45,7 +45,7 @@ class ToolDetail extends React.Component {
             </div>
           </div>
         }
-        <a href="/account/my_tools">Back to<b>{this.props.firstname}'s Tools</b>Listings</a>
+        <a href="/account/my_tools">Back to My Listings</a>
       </div>
     );
   }
