@@ -19,8 +19,9 @@ class NewTools extends React.Component {
         price: '',
         serialnumber: '',
         photo: '',
-        zipcode: '',
         user_id: '',
+        brand: '',
+        deposit: '',
       },
     }
   }
@@ -103,13 +104,13 @@ class NewTools extends React.Component {
               <br></br>
               <div className="make-model">
                 <div className="make">
-                  <label htmlFor="make">Make<p className="required-asterisk">*</p></label>
+                  <label htmlFor="brand">Make<p className="required-asterisk">*</p></label>
                   <br></br>
                   <input
                     className="input-small"
                     type="text"
-                    name="make"
-                    value={""}
+                    name="brand"
+                    value={toolAttributes.brand}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -141,12 +142,12 @@ class NewTools extends React.Component {
                   <br></br>
                 </div>
                 <div className="price-form">
-                  <label htmlFor="priceset">Price (Per Day)<p className="required-asterisk">*</p></label>
+                  <label htmlFor="price">Price (Per Day)<p className="required-asterisk">*</p></label>
                   <br></br>
                   <input
                     className="input-extra-small"
                     type="number"
-                    name="priceset"
+                    name="price"
                     value={toolAttributes.price}
                     onChange={this.handleChange}
                   />
@@ -159,7 +160,7 @@ class NewTools extends React.Component {
                     className="input-extra-small"
                     type="number"
                     name="deposit"
-                    value={""}
+                    value={toolAttributes.deposit}
                     onChange={this.handleChange}
                   />
                 </div>
