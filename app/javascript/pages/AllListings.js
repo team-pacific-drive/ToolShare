@@ -24,23 +24,25 @@ class AllListings extends React.Component {
 
   render () {
     return (
-      <div className='listings__container'>
-        <h1 className="alllistings-title">Available Tools</h1>
-        <a className="waves-effect waves-light btn add" href='/account/add_tools'>
-          <i className="material-icons left">add</i>Create New Listing
-        </a>
+      <div className="listings__container">
+        <div className="mytools-wrap">
+          <div className="mytools-header">
+            <p className="alllistings-title">All Listings</p>
+            <p className="all-add-text"><a href='/account/add_tools'>Add a Tool</a></p>
+          </div>
+        </div>
+        <hr className="mytools-hr"></hr>
         <div className="grid__listing">
-
-        {this.state.tools.map((tool, index) =>
-          <Cards key={index}
-            photo={tool.photo}
-            title={tool.title}
-            price={tool.price}
-            zipcode={tool.zipcode}
-            model={tool.model}
-            id={tool.id}
-          />
-        )}
+          {this.state.tools.map((tool, index) =>
+            <Cards key={index}
+              photo={tool.photo}
+              title={tool.title}
+              price={tool.price}
+              zipcode={tool.zipcode}
+              model={tool.model}
+              id={tool.id}
+            />
+          )}
         </div>
       </div>
     );

@@ -5,15 +5,12 @@ a:link, a:visited {
 
 }
 
-
-
-
 .card-container {
   width: 250px;
   height: 250px;
   background-color: grey;
   border-style: solid;
-  border-width: 1px 1px 2px 1px;
+  border-bottom: 2px;
   border-color: darkgrey;
   border-radius: 4px;
 }
@@ -27,11 +24,15 @@ img {
   width: 245px;
   height: 245px;
 }
+.card-title-container {
+  border: 1px solid blue;
 
+}
 
 .card-title {
   font-size: 18pt;
 }
+
 
 .card-model {
   font-size: 11pt;
@@ -44,7 +45,5 @@ img {
 }
 
 .card-price-container {
-  padding: 5px;
-  background-color: lightgrey;
-  border-radius: 5px;
+  border: 1px solid pink;
 }

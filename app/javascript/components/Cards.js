@@ -3,18 +3,19 @@ import PropTypes from "prop-types"
 
 const Cards = (props) => {
   return (
-    <div className="card-container">
+    <div>
       <a href={`/tool_details/${props.id}`}>
-        <div>
+        <div className="card-container">
           <div className="card-image">
             <img src={`${props.photo}`}/>
           </div>
           <div className="card-content">
-            <span className="card-title"><b>{props.title}</b></span>
-              <p className="card-model">{props.model}</p>
-          </div>
-          <div className="card-price-container">
-            <p className="card-price">${props.price}</p>
+            <div className="card-title-container">
+              <p className="card-title"><b>{props.title}</b></p>
+            </div>
+            <div className="card-price-container">
+              <p className="card-price">${props.price}</p>
+            </div>
           </div>
         </div>
       </a>
