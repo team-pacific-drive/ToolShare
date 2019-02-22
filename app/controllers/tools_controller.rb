@@ -42,6 +42,7 @@ class ToolsController < ApplicationController
   # PATCH/PUT /tools/1.json
   def update
     @tool = current_user.tools.find(params[:id])
+    
     respond_to do |format|
       if @tool.update(tool_params)
         format.html { redirect_to @tool, notice: 'Tool was successfully updated.' }
