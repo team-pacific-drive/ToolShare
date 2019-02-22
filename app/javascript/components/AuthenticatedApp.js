@@ -20,7 +20,16 @@ import AboutPage from '../pages/AboutPage'
 
 class AuthenticatedApp extends React.Component {
   state = {
-    currentUser: this.props.current_user
+    currentUser: this.props.current_user,
+    tools: []
+  }
+
+  componentDidMount = () => {
+    fetch('/tools.json')
+    .then((response) => response.json())
+    .then((tools) => {
+      this.setState({tools: tools})
+    })
   }
 
   nameInitial = () => {
@@ -48,7 +57,7 @@ class AuthenticatedApp extends React.Component {
             <Route path='/account/add_tools' exact render={(props) =>
               < NewTools />}
             />
-            <Route path='/account/edit_tool/:id' exact component={EditTool}/>
+            <Route path='/account/edit_tool/:id' exact render={(props) => <EditTool title='test' {...props}/>}/>
             <Route path='/' component={NotFound} />
           </Switch>
         </div>
