@@ -20,10 +20,12 @@
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0); /* this adds the "card" effect */
+  /* padding: 16px; */
   text-align: center;
-  background-color: #f1f1f1;
+  padding-bottom: 50px;
+  font-family: 'Muli', serif
+  /* background-color: #f1f1f1; */
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
@@ -38,27 +40,46 @@
 
 h1 {
   text-align: center;
+  font-family: 'Muli', serif;
+  font-size: 60px;
+  font-weight: bold;
 
 }
 
 .tool-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  width: 100%;
-  max-width: 400px;
+  width: 80%;
+  max-width: 180px;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
-.about-text {
-  text-align:;
-  border: .01px black solid;
-  margin-left: 50%;
+.column-about {
+  float: left;
+  width: 50%;
+  padding: 50px;
+  font-size: 20px;
+  font-family: 'Muli', serif
 }
 
-.left-side-image-about {
-  text-align: left;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.home-link-bottom:hover {
+  text-decoration: underline;
+}
+
+.home-link-bottom {
+  text-align: center;
+  /* justify-content: center; */
+  padding-bottom: 30px;
+  font-size: 15px;
+  padding-bottom: 30px;
 }
