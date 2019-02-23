@@ -15,7 +15,6 @@ const NavBar = (props) => {
             </a>
           </div>
           <ul className="navi-items">
-            <a href="/about"><li className="navi-element sign-out"><b>About</b></li></a>
             <a href="/"><li className="navi-element"><b>Rent a Tool</b></li></a>
             {props.firstname  &&
             <a href="/account/add_tools"><li className="navi-element"><b>Add a Tool</b></li></a>
@@ -27,11 +26,16 @@ const NavBar = (props) => {
             {props.firstname  &&
               <a href="/account/my_tools"><li className="navi-element"><b>{props.firstname}'s Tools</b></li></a>
             }
+            <a href="/about"><li className="navi-element"><b>About</b></li></a>
             {!props.firstname  &&
-            <a href="/users/sign_in"><li className="navi-element login-register"><b>Sign In / Join</b></li></a>
+              <a href="/users/sign_in"><li className="navi-element"><b>Sign In</b></li></a>
+            }
+            {!props.firstname  &&
+              <a href="/users/sign_up"><li className="navi-element login-register"><b>Join</b></li></a>
             }
             {props.firstname  &&
-            <a href="/users/sign_out"><li className="navi-element sign-out">Sign Out</li></a>
+            <a href="/users/sign_out" rel="nofollow" data-method="delete"><li className="navi-element sign-out"><b>Sign Out</b></li></a>
+            // <a rel="nofollow" data-method="delete" href="/users/sign_out">Sign Out</a>
             }
           </ul>
         </div>

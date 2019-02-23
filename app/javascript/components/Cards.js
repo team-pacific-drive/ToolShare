@@ -16,6 +16,13 @@ const Cards = (props) => {
             <div className="card-price-container">
               <p className="card-price">${props.price}</p>
             </div>
+         <div className="image-container">
+            <img className="listing-img" src={`${props.photo}`}/>
+            <span className="card-price">${props.price}</span>
+          </div>
+          <br></br>
+          <div className="card-title-container">
+            <p className="card-title"><b>{props.title}</b></p>
           </div>
         </div>
       </a>
