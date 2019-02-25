@@ -78,15 +78,16 @@ img {
 }
 
 .card-bottom {
+  border: 2px solid red;
   height: 40px;
   font-size: 12pt;
   margin: 0 12px;
   display: flex;
-  justify-content: space-between;
-  align-content: center;
-  line-height: 40px;
+  align-items: flex-end;
 }
 
 .days-ago {
   font-size: 10pt;
+  margin: 0;
+  padding: 0;
 }
