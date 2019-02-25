@@ -20,32 +20,43 @@ class ToolDetail extends React.Component {
     return (
       <div>
         {this.state.tool &&
-          <div>
-            <div className="outer-div">
-              <div className="detail-img">
-                <img src={`${tool.photo}`} className="materialboxed" width='450'/>
+          <div className="outer-div">
+            <div className="top-panel">
+              <h1 id="title">{tool.title}</h1>
+              <br></br>
+              <p className="detail-text" id="model">(Make) {tool.model}</p>
+              <br></br>
+              <hr className="tooldetail-hr"></hr>
+            </div>
+            <br></br>
+            <div className="panels">
+              <div className="detail-img-container">
+                <img src={`${tool.photo}`} className="detail-img"/>
               </div>
-              <div className="detail-container">
-                <div className="top-panel">
-                  <h1 id="title">{tool.title}</h1>
-                  <p className="detail-text" id="model">{tool.model}</p>
-                  <hr className="tooldetail-hr"></hr>
-                  <p className="detail-text" id="description">{tool.description}</p>
-                </div>
-                <div id="bottom-panel">
-                  <div className="detail-inner-container">
-                    <p className="detail-text" id="price-text">$</p><p className="detail-text" id="price"><b>{tool.price}</b></p><p className="detail-text" id="price-text">/day</p>
+              <div className="side-panel">
+                <p className="detail-text" id="description">{tool.description}</p>
+                <div className="detail-inner-container">
+                  <div className="left-container">
+                    <div className="price-container">
+                      <p className="detail-text" id="price"><b>${tool.price}</b></p><p className="detail-text" id="price-text"> per day</p>
+                    </div>
                     <p className="detail-text">With $100 deposit</p>
-                    <p className="detail-text" id="zip"><b>San Diego, CA</b> {tool.zipcode}</p>
-                    <button className="contact-button">Contact Info</button>
                   </div>
-                  <div className="map"></div>
+                  <div className="right-container">
+                    <p className="detail-text">Contact (Name)
+                    <br></br>
+                    <b>Phone:</b> (#)
+                    <br></br>
+                    <b>Email:</b> (#)
+                    </p>
+                    <p className="detail-text" id="zip">Location: <b>San Diego, CA</b> {tool.zipcode}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          <div className="map"></div>
+        </div>
         }
-        <Link to="/my_tools">Back to My Listings</Link>
       </div>
     );
   }

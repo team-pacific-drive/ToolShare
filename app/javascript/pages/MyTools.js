@@ -50,6 +50,7 @@ class MyTools extends React.Component {
         <div className="mytools-container">
           <hr className="mytools-hr"></hr>
           <table align="center" className="mytools-table">
+            <tbody>
               <tr>
                 <th className="th-img" ></th>
                 <th className="th-title">Title</th>
@@ -69,6 +70,7 @@ class MyTools extends React.Component {
                 </td>
               </tr>
             )}
+            </tbody>
           </table>
           <hr className="mytools-hr"></hr>
         </div>

@@ -1,64 +1,66 @@
-<h2>Sign up</h2>
+<div class="login-container">
+  <div class="form-container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <p class="login-title">Sign Up</p>
+    <hr class="login-hr"></hr>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input-small" %>
+    </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", class: "input-small" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input-small" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <div class="field">
+      <%= f.label :firstname %><br />
+      <%= f.text_field :firstname, autofocus: true, class: "input-small" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="field">
+      <%= f.label :lastname %><br />
+      <%= f.text_field :lastname, autofocus: true, class: "input-small" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :firstname %><br />
-    <%= f.text_field :firstname, autofocus: true %>
-  </div>
+    <div class="field">
+      <%= f.label :phone_number %><br />
+      <%= f.phone_field :phone_number, autofocus: true, autocomplete: "phone_number", class: "input-small" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :lastname %><br />
-    <%= f.text_field :lastname, autofocus: true %>
-  </div>
+    <div class="field">
+      <%= f.label :cross_street %><br />
+      <%= f.text_field :cross_street, autofocus: true, autocomplete: "cross_street", class: "input-small" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :phone_number %><br />
-    <%= f.phone_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
-  </div>
+    <div class="field">
+      <%= f.label :city %><br />
+      <%= f.text_field :city, autofocus: true, autocomplete: "city", class: "input-small" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :cross_street %><br />
-    <%= f.text_field :cross_street, autofocus: true, autocomplete: "cross_street" %>
-  </div>
+    <div class="field">
+      <%= f.label :state %><br />
+      <%= f.text_field :state, autofocus: true, autocomplete: "state", class: "input-small" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :city %><br />
-    <%= f.text_field :city, autofocus: true, autocomplete: "city" %>
-  </div>
+    <div class="field">
+      <%= f.label :zip_code %><br />
+      <%= f.number_field :zip_code, autofocus: true, autocomplete: "zip_code", class: "input-small" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state, autofocus: true, autocomplete: "state" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :zip_code %><br />
-    <%= f.number_field :zip_code, autofocus: true, autocomplete: "zip_code" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+    <div class="actions">
+      <%= f.submit "Sign up", class: "login-button" %>
+    </div>
+  <% end %>
+<div class="additional-links">
+  <%= render "devise/shared/links" %>
+</div>
