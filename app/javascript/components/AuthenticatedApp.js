@@ -32,9 +32,13 @@ class AuthenticatedApp extends React.Component {
     })
   }
 
-  nameInitial = () => {
-    let lastname = this.state.currentUser.lastname.split('', 1)
-    return lastname
+  addingToEndofName = () => {
+    let firstname = this.state.currentUser.firstname
+    if(firstname.endsWith('s')){
+      return firstname+'\''
+    } else {
+      return firstname+'\'s'
+    }
   }
 
   render () {
@@ -43,8 +47,7 @@ class AuthenticatedApp extends React.Component {
       <Router>
         <div>
           <NavBar
-            firstname={currentUser.firstname}
-            lastNameInitial={this.nameInitial()}
+            firstname={this.addingToEndofName()}
           />
           <Switch>
             <Route path='/' exact component={AllListings}/>

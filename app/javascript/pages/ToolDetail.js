@@ -1,6 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import { Link } from 'react-router-dom'
+
+import GoogleMaps from '../components/GoogleMaps'
 
 class ToolDetail extends React.Component {
   state = {
@@ -17,6 +20,13 @@ class ToolDetail extends React.Component {
 
   render(){
     const { tool } = this.state
+    if(tool){
+    let test = tool.user_cross_street
+    let test2 = test.replace("&", "random")
+     console.log(tool.user_cross_street);
+     console.log('test', test);
+     console.log('test2', test2);
+   }
     return (
       <div>
         {this.state.tool &&
@@ -39,7 +49,8 @@ class ToolDetail extends React.Component {
                     <p className="detail-text" id="zip"><b>San Diego, CA</b> {tool.zipcode}</p>
                     <button className="contact-button">Contact Info</button>
                   </div>
-                  <div className="map"></div>
+                  <div className="map">
+                  </div>
                 </div>
               </div>
             </div>
@@ -50,5 +61,14 @@ class ToolDetail extends React.Component {
     );
   }
 }
+// {tool.user_city &&
+  //   <GoogleMaps
+  //   crossStreet={tool.user_cross_street}
+  //   city={tool.user_city}
+  //   state={tool.user_state}
+  //   toolTitle={tool.title}
+  //   toolUser={tool.user_firstname}
+  //   />
+  // }
 
 export default ToolDetail

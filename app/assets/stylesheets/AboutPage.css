@@ -1,11 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Muli', serif;;
-}
-
 /* Float four columns side by side */
 .column {
   float: left;
@@ -15,7 +7,12 @@ body {
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;}
+.row {
+  margin: 0 -5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -42,12 +39,11 @@ body {
   }
 }
 
-h1 {
+.about-meet-title {
+  font-family: 'Muli', sans-serif;
   text-align: center;
-  font-family: 'Muli', serif;
   font-weight: bold;
   font-size: 65px;
-
 }
 
 .tool-logo {
