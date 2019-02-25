@@ -52,7 +52,6 @@ class ToolDetail extends React.Component {
                     </div>
                     <p className="detail-text">With $100 deposit</p>
                   </div>
-<<<<<<< HEAD
                   <div className="right-container">
                     <p className="detail-text">Contact (Name)
                     <br></br>
@@ -61,9 +60,6 @@ class ToolDetail extends React.Component {
                     <b>Email:</b> (#)
                     </p>
                     <p className="detail-text" id="zip">Location: <b>San Diego, CA</b> {tool.zipcode}</p>
-=======
-                  <div className="map">
->>>>>>> b7b0e91a26b04909fb14f2b048bdd93cf2666298
                   </div>
                 </div>
               </div>
@@ -71,10 +67,6 @@ class ToolDetail extends React.Component {
           <div className="map"></div>
         </div>
         }
-<<<<<<< HEAD
-=======
-        <a href="/account/my_tools">Back to My Listings</a>
->>>>>>> b7b0e91a26b04909fb14f2b048bdd93cf2666298
       </div>
     );
   }
