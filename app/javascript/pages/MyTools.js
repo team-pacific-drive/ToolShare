@@ -5,8 +5,6 @@ import {
   Link
 } from 'react-router-dom'
 
-import EditTool from './EditTool'
-
 class MyTools extends React.Component {
   state = {
     tools: [],
@@ -61,7 +59,7 @@ class MyTools extends React.Component {
               <tr key={index}>
                 <td><img src={`${tool.photo}`} height="74" width="74"/></td>
                 <td>{tool.title}</td>
-                <td className="model">(Make) {tool.model}</td>
+                <td className="model">{tool.brand} {tool.model}</td>
                 <td className="price">${tool.price}</td>
                 <td className="edit-delete">
                   <a className="edit" type='submit' href={`/account/edit_tool/${tool.id}`} rel="nofollow"><b>Edit</b></a>
