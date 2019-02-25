@@ -4,8 +4,9 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "babel-preset-react": "^6.24.1",
-    "google-map-react": "^1.1.2",
+    "google-maps-react": "^2.0.2",
     "jest": "23.6.0",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",

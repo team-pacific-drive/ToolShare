@@ -1,6 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import { Link } from 'react-router-dom'
+
+import GoogleMaps from '../components/GoogleMaps'
 
 class ToolDetail extends React.Component {
   state = {
@@ -17,6 +20,13 @@ class ToolDetail extends React.Component {
 
   render(){
     const { tool } = this.state
+    if(tool){
+    let test = tool.user_cross_street
+    let test2 = test.replace("&", "random")
+     console.log(tool.user_cross_street);
+     console.log('test', test);
+     console.log('test2', test2);
+   }
     return (
       <div>
         {this.state.tool &&
@@ -42,6 +52,7 @@ class ToolDetail extends React.Component {
                     </div>
                     <p className="detail-text">With $100 deposit</p>
                   </div>
+<<<<<<< HEAD
                   <div className="right-container">
                     <p className="detail-text">Contact (Name)
                     <br></br>
@@ -50,6 +61,9 @@ class ToolDetail extends React.Component {
                     <b>Email:</b> (#)
                     </p>
                     <p className="detail-text" id="zip">Location: <b>San Diego, CA</b> {tool.zipcode}</p>
+=======
+                  <div className="map">
+>>>>>>> b7b0e91a26b04909fb14f2b048bdd93cf2666298
                   </div>
                 </div>
               </div>
@@ -57,9 +71,22 @@ class ToolDetail extends React.Component {
           <div className="map"></div>
         </div>
         }
+<<<<<<< HEAD
+=======
+        <a href="/account/my_tools">Back to My Listings</a>
+>>>>>>> b7b0e91a26b04909fb14f2b048bdd93cf2666298
       </div>
     );
   }
 }
+// {tool.user_city &&
+  //   <GoogleMaps
+  //   crossStreet={tool.user_cross_street}
+  //   city={tool.user_city}
+  //   state={tool.user_state}
+  //   toolTitle={tool.title}
+  //   toolUser={tool.user_firstname}
+  //   />
+  // }
 
 export default ToolDetail

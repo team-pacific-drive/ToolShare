@@ -17,24 +17,20 @@ const NavBar = (props) => {
           <ul className="navi-items">
             <a href="/"><li className="navi-element"><b>Rent a Tool</b></li></a>
             {props.firstname  &&
-            <a href="/account/add_tools"><li className="navi-element"><b>Add a Tool</b></li></a>
+              <React.Fragment>
+                <a href="/account/add_tools"><li className="navi-element"><b>Add a Tool</b></li></a>
+                <a href="/about"><li className="navi-element"><b>About</b></li></a>
+                <a href="/account/my_tools"><li className="navi-element"><b>{props.firstname} Tools</b></li></a>
+                <a href="/users/sign_out" rel="nofollow" data-method="delete"><li className="navi-element sign-out"><b>Sign Out</b></li></a>
+              </React.Fragment>
             }
             {!props.firstname  &&
-            <a href="/users/sign_in"><li className="navi-element"><b>Add a Tool</b></li></a>
-            }
-
-            {props.firstname  &&
-              <a href="/account/my_tools"><li className="navi-element"><b>{props.firstname}'s Tools</b></li></a>
-            }
-            <a href="/about"><li className="navi-element"><b>About</b></li></a>
-            {!props.firstname  &&
-              <a href="/users/sign_in"><li className="navi-element"><b>Sign In</b></li></a>
-            }
-            {!props.firstname  &&
-              <a href="/users/sign_up"><li className="navi-element login-register"><b>Join</b></li></a>
-            }
-            {props.firstname  &&
-            <a href="/users/sign_out"><li className="navi-element sign-out">Sign Out</li></a>
+              <React.Fragment>
+                <a href="/users/sign_in"><li className="navi-element"><b>Add a Tool</b></li></a>
+                <a href="/about"><li className="navi-element"><b>About</b></li></a>
+                <a href="/users/sign_in"><li className="navi-element"><b>Sign In</b></li></a>
+                <a href="/users/sign_up"><li className="navi-element login-register"><b>Join</b></li></a>
+              </React.Fragment>
             }
           </ul>
         </div>

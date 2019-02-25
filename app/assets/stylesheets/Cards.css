@@ -13,6 +13,7 @@ a:link, a:visited {
   background-color: darkgray;
   align-items: center;
  justify-content: center;
+
 }
 
 img {
@@ -35,7 +36,6 @@ img {
 }
 
 
-
 .card-price {
   position: relative;
   z-index: 2;
@@ -50,14 +50,15 @@ img {
   background-color: #B6EAC2;
   font-family: 'Muli', serif;
   font-weight: bold;
-
 }
+
 
 
 
 .card-title-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   background-color: lightgray;
   margin-left: -1px;
   margin-top: -25px;
@@ -72,4 +73,19 @@ img {
 .card-title {
   font-size: 14pt;
   color: #31333D;
+  margin: 0 12px;
+}
+
+.card-bottom {
+  height: 40px;
+  font-size: 12pt;
+  margin: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  line-height: 40px;
+}
+
+.days-ago {
+  font-size: 10pt;
 }

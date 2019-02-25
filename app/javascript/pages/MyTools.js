@@ -1,11 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import moment from 'moment'
+
 import {
   Link
 } from 'react-router-dom'
-
-import EditTool from './EditTool'
 
 class MyTools extends React.Component {
   state = {
@@ -39,6 +39,8 @@ class MyTools extends React.Component {
   }
 
   render(){
+    let test = moment('2019-02-25T21:50:21.333Z').startOf('day').fromNow()
+    console.log('date', test);
     return (
       <div>
         <div className="mytools-wrap">
@@ -54,6 +56,7 @@ class MyTools extends React.Component {
               <tr>
                 <th className="th-img" ></th>
                 <th className="th-title">Title</th>
+                <th className="th-make">Created</th>
                 <th className="th-make">Make/Model</th>
                 <th className="th-price">Price</th>
                 <th className="th-edit"></th>
@@ -62,7 +65,8 @@ class MyTools extends React.Component {
               <tr key={index}>
                 <td><img src={`${tool.photo}`} height="74" width="74"/></td>
                 <td>{tool.title}</td>
-                <td className="model">(Make) {tool.model}</td>
+                <td className="created-date">{moment(tool.created_at).format('l')}</td>
+                <td className="model">{tool.brand} {tool.model}</td>
                 <td className="price">${tool.price}</td>
                 <td className="edit-delete">
                   <a className="edit" type='submit' href={`/account/edit_tool/${tool.id}`} rel="nofollow"><b>Edit</b></a>
