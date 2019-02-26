@@ -21,7 +21,7 @@ class ToolDetail extends React.Component {
 
   render(){
     const { tool } = this.state
-    console.log(this.props.currentUser.phone_number);
+    // console.log(this.props.currentUser.phone_number);
     return (
       <div>
         {this.state.tool &&
@@ -49,11 +49,12 @@ class ToolDetail extends React.Component {
                   </div>
                   <div className="right-container">
                     <p className="detail-text" id="contact-info">Contact Info</p>
-                    <p className="detail-text"><b>Phone:</b> {this.props.currentUser.phone_number}
+                    <p className="detail-text">
+                    <b>Phone:</b> {tool.user_phone_number}
                     <br></br>
-                    <b>Email:</b> {this.props.currentUser.email}
+                    <b>Email:</b> {tool.user_email}
                     </p>
-                    <p className="detail-text" id="zip">Location: <b>San Diego, CA</b> {tool.zipcode}</p>
+                    <p className="detail-text" id="zip">Location: <b>San Diego, CA</b> {tool.user_zip_code}</p>
                   </div>
                 </div>
               </div>
