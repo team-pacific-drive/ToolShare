@@ -4,6 +4,11 @@
   margin-left: 25%;
 }
 
+.conversation-container {
+  display: flex;
+  justify-content: center;
+}
+
 .login-title {
   font-size: 48pt;
   font-family: 'Muli', serif;
@@ -41,6 +46,10 @@ label {
   margin-top: 20px;
 }
 
+.conversation-hr {
+  width: 700px;
+  margin-bottom: 0px;
+}
 
 
 .login-button {
@@ -55,8 +64,45 @@ label {
   font-weight: bold;
 }
 
+.conversation-button {
+  margin-top: 30px;
+}
+
 @media (max-width: 600px) {
   .login-container {
   margin-left: 15%;
   }
+}
+
+.dropdown {
+  margin-bottom: 20px;
+}
+
+
+.chat-input-text {
+  color: #31333D;
+  margin-bottom: -30px;
+}
+
+.chat-div {
+display: flex;
+margin-bottom: -32px;
+}
+
+.message-div {
+  margin-top: 30px;
+}
+
+.chat-text, .description-text {
+  font-size: 18pt;
+  display: inline;
+}
+
+.chat-text {
+  font-weight: normal;
+  margin-left: 16px;
+}
+
+.conversation-list {
+  margin: 20px 0px 20px 0px;
 }
