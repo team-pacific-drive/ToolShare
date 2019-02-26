@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import {
   BrowserRouter as Router,
   Route,
@@ -8,6 +9,8 @@ import {
 } from 'react-router-dom'
 
 import Cards from '../components/Cards'
+
+import defaultPr from '../../assets/images/default-product.jpg'
 
 class AllListings extends React.Component {
   state = {
@@ -45,6 +48,20 @@ class AllListings extends React.Component {
               city={tool.user_city}
             />
           )}
+          <div className="card-container">
+            <div className="image-container">
+              <img className="listing-img" src={defaultPr}/>
+              <span className="card-price">$XX</span>
+            </div>
+            <br></br>
+            <div className="card-title-container">
+              <p className="card-title"><b>Your Tool</b></p>
+              <div className="card-bottom">
+                <p>Any Town, 12345</p>
+                <p className="days-ago"><b>create your tool today!</b></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

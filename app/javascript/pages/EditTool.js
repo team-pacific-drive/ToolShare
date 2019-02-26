@@ -8,9 +8,6 @@ import EditForm from '../components/EditForm'
 class EditTool extends React.Component{
   state = {
     tools: [],
-    message: null,
-    errors: null,
-    responseOk: false,
   }
 
   componentDidMount = () => {
@@ -20,20 +17,16 @@ class EditTool extends React.Component{
     .then((tools) => {
       // console.log(this.props);
       let filteredTools = tools.filter((tool) => tool.id == this.props.match.params.id)
-      console.log('filter', filteredTools)
       this.setState({tools: filteredTools[0]})
     })
   }
 
   render () {
-    let { responseOk, tools } = this.state
+    let { tools } = this.state
     const asteriskStyle = { color: "red" }
     return (
       <div className="newtools-container">
         <div className="form-container">
-          {responseOk &&
-          <Redirect to="/account/my_tools" />
-          }
           <p className="newtools-title">Edit Tool</p>
           <p className="required-text"><span style={asteriskStyle}>*</span> = Required Field</p>
           <hr className="newtools-hr"></hr>
