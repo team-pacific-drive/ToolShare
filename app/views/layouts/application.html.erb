@@ -15,6 +15,18 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <%= react_component "NavBar", current_user: {
+        id: current_user.id,
+        email: current_user.email,
+        firstname: current_user.firstname,
+        lastname: current_user.lastname,
+        tool_ids: current_user.tool_ids,
+      } %>
+    <% else %>
+      <%= react_component 'NavBar', props: {'logged_in': false}%>
+    <% end %>
+
     <%= yield %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
