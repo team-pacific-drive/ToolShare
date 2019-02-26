@@ -78,13 +78,12 @@ img {
 }
 
 .card-bottom {
+  border: 2px solid red;
   height: 40px;
   font-size: 10pt;
   margin: -20px 12px 8px 12px;
   display: flex;
-  justify-content: space-between;
-  align-content: center;
-  line-height: 40px;
+  align-items: flex-end;
 }
 
 .city-zip {
@@ -96,5 +95,4 @@ img {
   font-size: 10pt;
   display: inline;
   vertical-align: middle;
-
 }
