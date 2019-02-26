@@ -66,7 +66,7 @@ class GoogleMaps extends React.Component {
       <div>
         {this.state.latitude &&
           <Map google={this.props.google}
-               style={{height: '220px', width: '280px'}}
+               style={{height: '200px', width: '700px'}}
                onClick={this.onMapClicked}
                initialCenter={{
                  lat: this.state.latitude,

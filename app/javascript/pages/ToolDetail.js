@@ -59,21 +59,22 @@ class ToolDetail extends React.Component {
                 </div>
               </div>
             </div>
-          <div className="map"></div>
+          <div className="map">
+          {tool.user_city &&
+            <GoogleMaps
+            crossStreet={tool.user_cross_street}
+            city={tool.user_city}
+            state={tool.user_state}
+            toolTitle={tool.title}
+            toolUser={tool.user_firstname}
+            />
+          }
+          </div>
         </div>
         }
       </div>
     );
   }
 }
-// {tool.user_city &&
-  //   <GoogleMaps
-  //   crossStreet={tool.user_cross_street}
-  //   city={tool.user_city}
-  //   state={tool.user_state}
-  //   toolTitle={tool.title}
-  //   toolUser={tool.user_firstname}
-  //   />
-  // }
 
 export default ToolDetail

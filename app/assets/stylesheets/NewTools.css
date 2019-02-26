@@ -82,7 +82,7 @@ input:focus {
 }
 
 .input-description {
-  height: 60px;
+  height: 80px;
   width: 700px;
 }
 
@@ -121,4 +121,8 @@ input:focus {
 
 label {
   color: #31333D;
+}
+
+text, textarea {
+  vertical-align: top;
 }
