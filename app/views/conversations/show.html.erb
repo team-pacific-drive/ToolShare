@@ -13,8 +13,10 @@
       <div class="message-div">
         <%= text_area_tag :body, nil, placeholder: "Message", class: "input-description" %>
       </div>
-
-      <%= submit_tag :Send, class: "login-button" %>
+      <div>
+        <%= submit_tag :Send, class: "login-button" %>
+        <a href="/conversations" class="back-button">Message List</a>
+      </div>
     <% end %>
   </div>
 </div>

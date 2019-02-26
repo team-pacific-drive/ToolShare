@@ -64,6 +64,16 @@ label {
   font-weight: bold;
 }
 
+.back-button {
+  margin-top: 8px;
+  padding: 9px 18px 9px 18px;
+  color: #31333D;
+  background-color: lightgrey;
+  border-radius: 4px;
+  font-family: 'Muli', serif;
+  font-size: 14pt;
+}
+
 .conversation-button {
   margin-top: 30px;
 }
@@ -104,5 +114,11 @@ margin-bottom: -32px;
 }
 
 .conversation-list {
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0px 30px 0px;
+  font-size: 24pt;
+}
+
+
+text, textarea {
+  vertical-align: top;
 }
