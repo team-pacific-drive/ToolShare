@@ -16,7 +16,7 @@ const Cards = (props) => {
           <div className="card-title-container">
             <p className="card-title"><b>{props.title}</b></p>
             <div className="card-bottom">
-              <p>{props.city}, {props.zipcode}</p>
+              <p className="city-zip">{props.city}, {props.state}</p>
               <p className="days-ago"><b>{moment(props.created).startOf('day').fromNow()}</b></p>
             </div>
           </div>

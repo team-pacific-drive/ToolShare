@@ -12,8 +12,8 @@ a:link, a:visited {
   margin-top: 40px;
   background-color: darkgray;
   align-items: center;
- justify-content: center;
-
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 img {
@@ -33,6 +33,7 @@ img {
   border-radius: 8px 8px 0px 0px;
   position: absolute;
   z-index: 1;
+  height: 100%;
 }
 
 
@@ -73,20 +74,25 @@ img {
 .card-title {
   font-size: 14pt;
   color: #31333D;
-  margin: 0 12px;
+  margin: 8px 12px 0px 12px;
 }
 
 .card-bottom {
   border: 2px solid red;
   height: 40px;
-  font-size: 12pt;
-  margin: 0 12px;
+  font-size: 10pt;
+  margin: -20px 12px 8px 12px;
   display: flex;
   align-items: flex-end;
 }
 
-.days-ago {
+.city-zip {
+    text-transform: uppercase;
+}
+
+
+.city-zip, .days-ago {
   font-size: 10pt;
-  margin: 0;
-  padding: 0;
+  display: inline;
+  vertical-align: middle;
 }

@@ -84,7 +84,7 @@ td {
 }
 
 .th-img {
-  width: 100px;
+  min-width: 100px;
 }
 
 .th-title {
