@@ -7,7 +7,6 @@ import {
   Switch,
 } from 'react-router-dom'
 
-import NavBar from './NavBar'
 import GoogleMaps from './GoogleMaps'
 
 import AllListings from '../pages/AllListings'
@@ -32,24 +31,12 @@ class AuthenticatedApp extends React.Component {
     })
   }
 
-  addingToEndofName = () => {
-    let firstname = this.state.currentUser.firstname
-    if(firstname.endsWith('s')){
-      return firstname+'\''
-    } else {
-      return firstname+'\'s'
-    }
-  }
-
   render () {
     const { currentUser } = this.state
     // console.log(currentUser);
     return (
       <Router>
         <div>
-          <NavBar
-            firstname={this.addingToEndofName()}
-          />
           <Switch>
             <Route path='/' exact component={AllListings}/>
             <Route path="/tool_details/:id" exact component={ToolDetail} />

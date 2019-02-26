@@ -1,12 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import {
   BrowserRouter as Router,
   Route,
   Switch,
 } from "react-router-dom"
-
-import NavBar from "./NavBar"
 
 import AllListings from "../pages/AllListings"
 import ToolDetail from '../pages/ToolDetail'
@@ -18,7 +17,6 @@ class UnauthenticatedApp extends React.Component {
     return (
       <Router>
         <div>
-          <NavBar/>
           <Switch>
             <Route path='/' exact component={AllListings}/>
             <Route path="/tool_details/:id" exact component={ToolDetail}/>

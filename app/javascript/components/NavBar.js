@@ -1,9 +1,23 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import Logo from './../../assets/images/logo2.svg'
 
-const NavBar = (props) => {
-  return(
+class NavBar extends React.Component{
+
+   addingToEndofName = () => {
+    let { current_user } = this.props
+    let firstname = current_user.firstname
+    if(firstname.endsWith('s')){
+      return firstname+'\''
+    } else {
+      return firstname+'\'s'
+    }
+  }
+
+  render(){
+    let { current_user } = this.props
+    return(
       <div className="navi-span">
         <div className="navi-container">
           <div className="toolshare">
@@ -17,15 +31,20 @@ const NavBar = (props) => {
           <ul className="navi-items">
             <a href="/about"><li className="navi-element"><b>About</b></li></a>
             <a href="/"><li className="navi-element"><b>Rent a Tool</b></li></a>
-            {props.firstname  &&
+            {current_user &&
               <React.Fragment>
                 <a href="/account/add_tools"><li className="navi-element"><b>Add a Tool</b></li></a>
+<<<<<<< HEAD
+                <a href="/about"><li className="navi-element"><b>About</b></li></a>
+                <a href="/account/my_tools"><li className="navi-element"><b>{this.addingToEndofName()} Tools</b></li></a>
+=======
                 <a href="/account/my_tools"><li className="navi-element"><b>{props.firstname} Tools</b></li></a>
                 <a href="/conversations"><li className="navi-element"><b>Messages</b></li></a>
+>>>>>>> master
                 <a href="/users/sign_out" rel="nofollow" data-method="delete"><li className="navi-element sign-out"><b>Sign Out</b></li></a>
               </React.Fragment>
             }
-            {!props.firstname  &&
+            {!current_user &&
               <React.Fragment>
                 <a href="/users/sign_in"><li className="navi-element"><b>Add a Tool</b></li></a>
                 <a href="/about"><li className="navi-element"><b>About</b></li></a>
@@ -36,7 +55,8 @@ const NavBar = (props) => {
           </ul>
         </div>
       </div>
-  )
+    )
+  }
 }
 
 export default NavBar
