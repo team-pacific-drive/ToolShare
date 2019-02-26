@@ -20,13 +20,6 @@ class ToolDetail extends React.Component {
 
   render(){
     const { tool } = this.state
-    if(tool){
-    let test = tool.user_cross_street
-    let test2 = test.replace("&", "random")
-     console.log(tool.user_cross_street);
-     console.log('test', test);
-     console.log('test2', test2);
-   }
     return (
       <div>
         {this.state.tool &&
@@ -50,14 +43,13 @@ class ToolDetail extends React.Component {
                     <div className="price-container">
                       <p className="detail-text" id="price"><b>${tool.price}</b></p><p className="detail-text" id="price-text"> per day</p>
                     </div>
-                    <p className="detail-text">With $100 deposit</p>
+                    <p className="detail-text" id="deposit">(With ${tool.deposit} deposit)</p>
                   </div>
                   <div className="right-container">
-                    <p className="detail-text">Contact (Name)
+                    <p className="detail-text" id="contact-info">Contact Info</p>
+                    <p className="detail-text"><b>Phone:</b> insert
                     <br></br>
-                    <b>Phone:</b> (#)
-                    <br></br>
-                    <b>Email:</b> (#)
+                    <b>Email:</b> insert
                     </p>
                     <p className="detail-text" id="zip">Location: <b>San Diego, CA</b> {tool.zipcode}</p>
                   </div>
