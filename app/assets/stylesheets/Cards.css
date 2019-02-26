@@ -75,12 +75,7 @@ img {
 .card-title {
   font-size: 14pt;
   color: #31333D;
-<<<<<<< HEAD
-  margin: 8px 12px 0px 12px;
-  margin: 8px 12px -24px 12px;
-=======
   margin: 8px 12px;
->>>>>>> master
 }
 
 .card-bottom {
