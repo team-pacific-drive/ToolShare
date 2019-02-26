@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import tool3 from '../../assets/images/tool3.jpeg'
 import noPhoto from '../../assets/images/no_photo.jpeg'
 import logo from '../../assets/images/logo.svg'
 

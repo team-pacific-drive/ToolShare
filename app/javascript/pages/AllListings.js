@@ -38,9 +38,11 @@ class AllListings extends React.Component {
               photo={tool.photo}
               title={tool.title}
               price={tool.price}
-              zipcode={tool.zipcode}
+              zipcode={tool.user_zip_code}
               model={tool.model}
               id={tool.id}
+              created={tool.created_at}
+              city={tool.user_city}
             />
           )}
         </div>
