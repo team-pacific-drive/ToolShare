@@ -68,7 +68,8 @@ img {
   border-radius: 0px 0px 8px 8px;
   border: 1px solid darkgrey;
   border-bottom: 3px solid darkgrey;
-
+  position: absolute;
+  font-family: 'Muli', sans-serif;
 }
 
 .card-title {
@@ -78,16 +79,18 @@ img {
 }
 
 .card-bottom {
-  border: 2px solid red;
   height: 40px;
   font-size: 12pt;
   margin: 0 12px;
-  display: flex;
-  align-items: flex-end;
+  font-family: 'Muli', sans-serif;
+}
+
+.card-bottom > p {
+  margin: 0;
 }
 
 .days-ago {
-  font-size: 10pt;
+  font-size: 8pt;
   margin: 0;
   padding: 0;
 }
