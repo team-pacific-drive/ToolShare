@@ -74,14 +74,13 @@ img {
 .card-title {
   font-size: 14pt;
   color: #31333D;
-  margin: 8px 12px 0px 12px;
+  margin: 8px 12px -24px 12px;
 }
 
 .card-bottom {
-  border: 2px solid red;
   height: 40px;
   font-size: 10pt;
-  margin: -20px 12px 8px 12px;
+  margin: 8px 12px 8px 12px;
   display: flex;
   align-items: flex-end;
 }
@@ -90,9 +89,11 @@ img {
     text-transform: uppercase;
 }
 
+.days-ago {
+}
 
 .city-zip, .days-ago {
   font-size: 10pt;
-  display: inline;
-  vertical-align: middle;
+  margin: -10px 0px 0px 0px;
+  padding: 0;
 }
