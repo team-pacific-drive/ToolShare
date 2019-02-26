@@ -68,32 +68,28 @@ img {
   border-radius: 0px 0px 8px 8px;
   border: 1px solid darkgrey;
   border-bottom: 3px solid darkgrey;
-
+  position: absolute;
+  font-family: 'Muli', sans-serif;
 }
 
 .card-title {
   font-size: 14pt;
   color: #31333D;
-  margin: 8px 12px -24px 12px;
+  margin: 8px 12px;
 }
 
 .card-bottom {
   height: 40px;
-  font-size: 10pt;
-  margin: 8px 12px 8px 12px;
-  display: flex;
-  align-items: flex-end;
+  font-size: 12pt;
+  margin: 0 12px;
+  font-family: 'Muli', sans-serif;
 }
 
-.city-zip {
-    text-transform: uppercase;
+.card-bottom > p {
+  margin: 0;
 }
 
 .days-ago {
-}
-
-.city-zip, .days-ago {
-  font-size: 10pt;
-  margin: -10px 0px 0px 0px;
+  font-size: 8pt;
   padding: 0;
 }

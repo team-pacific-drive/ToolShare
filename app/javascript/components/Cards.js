@@ -1,9 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import moment from 'moment'
+import moment from 'moment-timezone'
 
 const Cards = (props) => {
+  let time = moment(props.created).format('h:mm:ss a')
+  let newTime =  moment(time, 'h:mm:ss a').fromNow()
   return (
     <div>
       <a href={`/tool_details/${props.id}`}>
@@ -16,8 +18,8 @@ const Cards = (props) => {
           <div className="card-title-container">
             <p className="card-title"><b>{props.title}</b></p>
             <div className="card-bottom">
-              <p className="city-zip">{props.city}, {props.state}</p>
-              <p className="days-ago"><b>{moment(props.created).startOf('day').fromNow()}</b></p>
+              <p>{props.city}, {props.zipcode}</p>
+              <p className="days-ago"><b>{newTime}</b></p>
             </div>
           </div>
         </div>
