@@ -22,7 +22,7 @@ class ToolDetail extends React.Component {
 
   render(){
     const { tool } = this.state
-    console.log(this.props.currentUser.phone_number);
+    // console.log(this.props.currentUser.phone_number);
     return (
       <div>
         {this.state.tool &&
@@ -53,11 +53,11 @@ class ToolDetail extends React.Component {
                       <p className="detail-text" id="contact-info">Contact Info</p>
                     </div>
                     <div className="contact-details">
-                      <p className="detail-text"><img src={require('../../assets/images/phone-icon.svg')} className="contact-icons"/>  {this.props.currentUser.phone_number}
+                      <p className="detail-text"><img src={require('../../assets/images/phone-icon.svg')} className="contact-icons"/>  {tool.user_phone_number}
                       <br></br>
-                      <img src={require("../../assets/images/email-icon.svg")} className="contact-icons"/>  {this.props.currentUser.email}
+                      <img src={require("../../assets/images/email-icon.svg")} className="contact-icons"/>  {tool.user_email}
                       <br></br>
-                      <img src={require('../../assets/images/location-icon.svg')} className="contact-icons"/>  San Diego, CA {tool.zipcode}</p>
+                      <img src={require('../../assets/images/location-icon.svg')} className="contact-icons"/>  San Diego, CA {tool.user_zip_code}</p>
                     </div>
                     <a href="/conversations"><button className="user-message-button">Direct Message</button></a>
                   </div>
