@@ -1,8 +1,7 @@
 a:link, a:visited {
-  text-decoration: none;
+  text-decoration: none !important;
   color: black;
   font-family: 'Muli', sans-serif;
-
 }
 
 .card-container {
@@ -13,8 +12,8 @@ a:link, a:visited {
   margin-top: 40px;
   background-color: darkgray;
   align-items: center;
- justify-content: center;
-
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 img {
@@ -27,13 +26,14 @@ img {
   height: 248px;
   position: relative;
   z-index: 0;
-
 }
 
 .listing-img {
+  pointer-events: none;
   border-radius: 8px 8px 0px 0px;
   position: absolute;
   z-index: 1;
+  height: 100%;
 }
 
 
@@ -73,9 +73,9 @@ img {
 }
 
 .card-title {
-  font-size: 18pt;
+  font-size: 14pt;
   color: #31333D;
-  margin: 0 12px;
+  margin: 8px 12px -24px 12px;
 }
 
 .card-bottom {
@@ -87,6 +87,10 @@ img {
 
 .card-bottom > p {
   margin: 0;
+}
+
+.city-zip {
+    text-transform: uppercase;
 }
 
 .days-ago {
