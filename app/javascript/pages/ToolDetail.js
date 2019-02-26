@@ -8,6 +8,7 @@ import GoogleMaps from '../components/GoogleMaps'
 class ToolDetail extends React.Component {
   state = {
     tool: null,
+    user: null
   }
 
   componentDidMount = () => {
@@ -20,6 +21,7 @@ class ToolDetail extends React.Component {
 
   render(){
     const { tool } = this.state
+    console.log(this.props.currentUser.phone_number);
     return (
       <div>
         {this.state.tool &&
@@ -47,9 +49,9 @@ class ToolDetail extends React.Component {
                   </div>
                   <div className="right-container">
                     <p className="detail-text" id="contact-info">Contact Info</p>
-                    <p className="detail-text"><b>Phone:</b> insert
+                    <p className="detail-text"><b>Phone:</b> {this.props.currentUser.phone_number}
                     <br></br>
-                    <b>Email:</b> insert
+                    <b>Email:</b> {this.props.currentUser.email}
                     </p>
                     <p className="detail-text" id="zip">Location: <b>San Diego, CA</b> {tool.zipcode}</p>
                   </div>

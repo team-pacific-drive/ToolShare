@@ -7,9 +7,9 @@ RSpec.describe Tool, type: :model do
 
       @tool = Tool.create(title: "Drill", model: "t300", description: "In good shape", price: "25")
     end
-    # it "can be created" do
-    #   expect(@tool).to be_valid
-    # end
+    it "can be created" do
+      expect(@tool).to be_valid
+    end
     it "cannot be created without firstname, lastname, cross_street, city, state, zip_code" do
       @tool.title = nil
       @tool.model = nil
