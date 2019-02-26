@@ -1,3 +1,4 @@
+<%= react_component 'NavBar' %>
 <div class="conversation-container">
   <div class="form-container">
     <p class="login-title">New Conversation</p>
@@ -21,6 +22,7 @@
 
       <div>
         <%= submit_tag :Send, class: "login-button" %>
+        <a href="/conversations" class="back-button">Message List</a>
       </div>
     <% end %>
   </div>

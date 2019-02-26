@@ -52,7 +52,7 @@ class AuthenticatedApp extends React.Component {
           />
           <Switch>
             <Route path='/' exact component={AllListings}/>
-            <Route path="/tool_details/:id" exact render={(props) => <ToolDetail {...props} currentUser={currentUser} />} />
+            <Route path="/tool_details/:id" exact component={ToolDetail} />
             <Route path='/about' exact component={AboutPage} />
             <Route path='/account/maps' exact component={GoogleMaps}/>
             <Route path="/account/my_tools" exact render={(props) =>
@@ -61,7 +61,7 @@ class AuthenticatedApp extends React.Component {
             <Route path='/account/add_tools' exact render={(props) =>
               < NewTools />}
             />
-            <Route path='/account/edit_tool/:id' exact render={(props) => <EditTool title='test' {...props}/>}/>
+            <Route path='/account/edit_tool/:id' exact component={EditTool}/>
             <Route path='/' component={NotFound} />
           </Switch>
         </div>

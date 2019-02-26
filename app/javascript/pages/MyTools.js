@@ -41,6 +41,7 @@ class MyTools extends React.Component {
   render(){
     let test = moment('2019-02-25T21:50:21.333Z').startOf('day').fromNow()
     console.log('date', test);
+    console.log(this.state.tools)
     return (
       <div>
         <div className="mytools-wrap">

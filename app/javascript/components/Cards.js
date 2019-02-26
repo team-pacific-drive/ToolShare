@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import moment from 'moment'
+import moment from 'moment-timezone'
 
 const Cards = (props) => {
   let time = moment(props.created).format('h:mm:ss a')

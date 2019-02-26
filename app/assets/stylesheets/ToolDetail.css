@@ -13,7 +13,7 @@
 .top-panel {
   min-width: 700px;
   display: block;
-  margin-top: 66px;
+  margin-top: 24px;
 }
 
 
@@ -67,10 +67,9 @@
 }
 
 .map {
-  height: 220px;
+  height: 200px;
   width: 100%;
-  background-color: black;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .detail-inner-container {
