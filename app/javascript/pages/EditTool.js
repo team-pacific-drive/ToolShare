@@ -1,17 +1,12 @@
 import React from 'react'
 import PropTypes from "prop-types"
 
-import { Redirect } from 'react-router-dom'
-
 import EditForm from '../components/EditForm'
 
 class EditTool extends React.Component{
   state = {
       tools: [],
-      message: null,
-      errors: null,
-      responseOk: false,
-    }
+  }
 
   componentDidMount = () => {
     const { toolAttributes } = this.state
@@ -31,18 +26,14 @@ class EditTool extends React.Component{
   render () {
     let { responseOk, tools } = this.state
     const asteriskStyle = {color: "red"}
-    console.log('tools title', tools.title);
     return (
       <div className="newtools-container">
         <div className="form-container">
-          {responseOk &&
-          <Redirect to="/account/my_tools" />
-          }
           <p className="newtools-title">Edit Tool</p>
           <p className="required-text"><span style={asteriskStyle}>*</span> = Required Field</p>
           <hr className="newtools-hr"></hr>
           <br></br>
-          { this.state.tools ?
+          { tools.title &&
             <EditForm
             title={tools.title}
             description={tools.description}
@@ -53,7 +44,6 @@ class EditTool extends React.Component{
             brand={tools.brand}
             deposit={tools.deposit}
             params={this.props.match.params.id}/>
-            : null
           }
         </div>
       </div>

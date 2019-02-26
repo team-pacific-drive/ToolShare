@@ -1,9 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import moment from 'moment'
+import moment from 'moment-timezone'
 
 const Cards = (props) => {
+  let time = moment('2019-02-25T23:49:01.632Z').format('MMMM Do YYYY, h:mm:ss a')
+  console.log(moment().startOf(time).fromNow());
+
   return (
     <div>
       <a href={`/tool_details/${props.id}`}>

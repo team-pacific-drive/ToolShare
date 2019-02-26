@@ -60,7 +60,7 @@ class AuthenticatedApp extends React.Component {
             <Route path='/account/add_tools' exact render={(props) =>
               < NewTools />}
             />
-            <Route path='/account/edit_tool/:id' exact render={(props) => <EditTool title='test' {...props}/>}/>
+            <Route path='/account/edit_tool/:id' exact component={EditTool}/>
             <Route path='/' component={NotFound} />
           </Switch>
         </div>

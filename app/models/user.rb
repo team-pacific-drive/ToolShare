@@ -15,4 +15,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :tools
+
+  validates :firstname, :lastname, :cross_street, :city, :state, :zip_code, :phone_number, presence: true
 end
