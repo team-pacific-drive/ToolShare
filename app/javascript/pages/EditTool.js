@@ -5,7 +5,11 @@ import EditForm from '../components/EditForm'
 
 class EditTool extends React.Component{
   state = {
+<<<<<<< HEAD
       tools: [],
+=======
+    tools: [],
+>>>>>>> 6a8188fd02640e3861378d9f8f5e99a125ef549a
   }
 
   componentDidMount = () => {
@@ -15,17 +19,18 @@ class EditTool extends React.Component{
     .then((tools) => {
       // console.log(this.props);
       let filteredTools = tools.filter((tool) => tool.id == this.props.match.params.id)
-      console.log('filter', filteredTools)
       this.setState({tools: filteredTools[0]})
     })
   }
 
-
-
-
   render () {
+<<<<<<< HEAD
     let { responseOk, tools } = this.state
     const asteriskStyle = {color: "red"}
+=======
+    let { tools } = this.state
+    const asteriskStyle = { color: "red" }
+>>>>>>> 6a8188fd02640e3861378d9f8f5e99a125ef549a
     return (
       <div className="newtools-container">
         <div className="form-container">

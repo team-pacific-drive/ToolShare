@@ -1,4 +1,29 @@
-/* Float four columns side by side */
+.about-container {
+  width: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-title {
+  font-size: 48pt;
+  font-family: 'Muli', serif;
+  font-weight: 800;
+  margin-bottom: -40px;
+  color: #31333D;
+  width: 700px;
+}
+
+.about-header {
+  display: flex;
+  width: 700px;
+}
+
+
+
+
+
+/*
+Float four columns side by side
 .column {
   float: left;
   width: 25%;
@@ -6,7 +31,7 @@
   text-align: center;
 }
 
-/* Remove extra left and right margins, due to padding in columns */
+/* Remove extra left and right margins, due to padding in columns
 .row {
   margin: 0 -5px;
   display: flex;
@@ -14,14 +39,14 @@
   justify-content: center;
 }
 
-/* Clear floats after the columns */
+/* Clear floats after the columns
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Style the counter cards */
+/* Style the counter cards
 .card {
   padding: 16px;
   text-align: center;
@@ -29,7 +54,7 @@
   padding-bottom: 80px;
 }
 
-/* Responsive columns - one column layout (vertical) on small screens */
+/* Responsive columns - one column layout (vertical) on small screens
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -62,7 +87,7 @@
   padding: 70px;
   font-size: 20px;
   /* padding-left: 80px;
-  padding-right: 80px; */
+  padding-right: 80px;
 
 }
 .link-home:hover {
@@ -73,4 +98,4 @@
   font-size: 20;
   padding-bottom: 30px;
   font-family: 'Muli', serif;
-}
+} */
