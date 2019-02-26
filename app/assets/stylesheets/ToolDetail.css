@@ -23,20 +23,24 @@
   font-weight: 800;
   color: #31333D;
   width: 100%;
-  margin-bottom: -40px;
+  margin-bottom: 0px;
 }
 
 
 #model {
   font-size: 14pt;
   font-style: italic;
-  margin-bottom: 0px;
+  margin-bottom: -28px;
+  text-align: right;
 }
 
+#title, #model {
+  display: inline;
+}
 
 .tooldetail-hr {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: -16px;
   color: black;
 }
 
@@ -48,7 +52,7 @@
 .detail-img {
   width: 220px;
   height: 220px;
-  margin-top: 22px;
+  margin-top: 38px;
 }
 
 .panels {
@@ -76,6 +80,7 @@
   display: flex;
   width: 460px;
   margin-top: 0px;
+  height: 130px;
 }
 
 .detail-text {
@@ -92,7 +97,7 @@
 
 #description {
   font-size: 12pt;
-  height: 64px;
+  height: 74px;
 }
 
 #serial {
@@ -108,7 +113,7 @@
   margin-right: 20px;
   align-items: center;
   text-align: center;
-  padding-top: 28px;
+  padding-top: 20px;
 }
 .right-container {
 
@@ -117,11 +122,47 @@
   border: 1px solid grey;
   border-radius: 6px;
   padding-top: 0px;
-  padding: 12px;
+  text-align: center;
 }
 
 .left-container, .right-container {
   display: inline;
+}
+
+.contact-container {
+  text-align: center;
+  background: lightgrey;
+  width: 218px;
+  height: 30px;
+  border-radius: 6px 6px 0px 0px;
+  border-bottom: 1px solid grey;
+  margin-left: 0%;
+  margin-bottom: -10px;
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+.user-message-button {
+  width: 200px;
+  height: 24px;
+  color: #31333D;
+  background-color: #B6EAC2;
+  border-radius: 4px;
+  font-family: 'Muli', serif;
+  font-size: 11pt;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-details {
+  margin-bottom: -10px;
+}
+
+.contact-icons {
+  height: 16px;
+  width: 16px;
+  margin-bottom: -2px;
+  margin-right: 2px;
 }
 
 #price {
