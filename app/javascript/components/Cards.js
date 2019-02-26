@@ -4,14 +4,8 @@ import PropTypes from "prop-types"
 import moment from 'moment-timezone'
 
 const Cards = (props) => {
-<<<<<<< HEAD
-  let time = moment('2019-02-25T23:49:01.632Z').format('MMMM Do YYYY, h:mm:ss a')
-  console.log(moment().startOf(time).fromNow());
-
-=======
   let time = moment(props.created).format('h:mm:ss a')
   let newTime =  moment(time, 'h:mm:ss a').fromNow()
->>>>>>> 6a8188fd02640e3861378d9f8f5e99a125ef549a
   return (
     <div>
       <a href={`/tool_details/${props.id}`}>

@@ -75,7 +75,7 @@ img {
 .card-title {
   font-size: 14pt;
   color: #31333D;
-  margin: 8px 12px -24px 12px;
+  margin: 8px 12px;
 }
 
 .card-bottom {
@@ -89,12 +89,7 @@ img {
   margin: 0;
 }
 
-.city-zip {
-    text-transform: uppercase;
-}
-
 .days-ago {
   font-size: 8pt;
-  margin: 0;
   padding: 0;
 }
