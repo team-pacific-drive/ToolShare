@@ -36,6 +36,7 @@ class EditForm extends  React.Component{
           photo: this.props.photo,
           brand: this.props.brand,
           deposit: this.props.deposit,
+          model: this.props.model,
         },
       })
     })
@@ -65,8 +66,6 @@ class EditForm extends  React.Component{
 
   render(){
     let { toolAttributes, responseOk } = this.state
-    console.log('toolAtt', toolAttributes);
-    console.log('props', this.props);
     return(
       <div className="form">
         {responseOk &&
@@ -95,67 +94,67 @@ class EditForm extends  React.Component{
           />
           <br></br>
           <div className="make-model">
-          <div className="make">
-          <label htmlFor="make">Make<p className="required-asterisk">*</p></label>
-          <br></br>
-          <input
-          className="input-small"
-          type="text"
-          name="brand"
-          value={toolAttributes.brand}
-          onChange={this.handleChange}
-          />
-          </div>
-          <br></br>
-          <div className="model">
-          <label htmlFor="model">Model<p className="required-asterisk">*</p></label>
-          <br></br>
-          <input
-          className="input-small"
-          type="text"
-          name="model"
-          value={toolAttributes.model}
-          onChange={this.handleChange}
-          />
-          </div>
+            <div className="make">
+              <label htmlFor="make">Make<p className="required-asterisk">*</p></label>
+              <br></br>
+              <input
+              className="input-small"
+              type="text"
+              name="brand"
+              value={toolAttributes.brand}
+              onChange={this.handleChange}
+              />
+            </div>
+            <br></br>
+            <div className="model">
+              <label htmlFor="model">Model<p className="required-asterisk">*</p></label>
+              <br></br>
+              <input
+              className="input-small"
+              type="text"
+              name="model"
+              value={toolAttributes.model}
+              onChange={this.handleChange}
+              />
+            </div>
           </div>
           <br></br>
           <div className="serial-price-deposit">
-          <div className="serialnumber">
-          <label htmlFor="serialnumber">Serial #</label>
-          <br></br>
-          <input
-          className="input-small"
-          type="text"
-          name="serialnumber"
-          value={toolAttributes.serialnumber}
-          onChange={this.handleChange}
-          />
-          <br></br>
-          </div>
-          <div className="price-form">
-          <label htmlFor="price">Price (Per Day)<p className="required-asterisk">*</p></label>
-          <br></br>
-          <input
-          className="input-extra-small"
-          type="number"
-          name="price"
-          value={toolAttributes.price}
-          onChange={this.handleChange}
-          />
-          </div>
-          <br></br>
-          <div className="deposit">
-          <label htmlFor="deposit">Deposit<p className="required-asterisk">*</p></label>
-          <br></br>
-          <input
-          className="input-extra-small"
-          type="number"
-          name="deposit"
-          value={toolAttributes.deposit}
-          onChange={this.handleChange}
-          />
-          </div>
+            <div className="serialnumber">
+              <label htmlFor="serialnumber">Serial #</label>
+              <br></br>
+              <input
+              className="input-small"
+              type="text"
+              name="serialnumber"
+              value={toolAttributes.serialnumber}
+              onChange={this.handleChange}
+              />
+              <br></br>
+            </div>
+            <div className="price-form">
+              <label htmlFor="price">Price (Per Day)<p className="required-asterisk">*</p></label>
+              <br></br>
+              <input
+              className="input-extra-small"
+              type="number"
+              name="price"
+              value={toolAttributes.price}
+              onChange={this.handleChange}
+              />
+            </div>
+            <br></br>
+            <div className="deposit">
+              <label htmlFor="deposit">Deposit<p className="required-asterisk">*</p></label>
+              <br></br>
+              <input
+              className="input-extra-small"
+              type="number"
+              name="deposit"
+              value={toolAttributes.deposit}
+              onChange={this.handleChange}
+              />
+            </div>
           </div>
           <br></br>
           <label htmlFor="photo">Photo URL</label>
