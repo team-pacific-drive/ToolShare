@@ -29,7 +29,7 @@ class ToolDetail extends React.Component {
           <div className="outer-div">
             <div className="top-panel">
               <p id="title">{tool.title}</p>
-              <p className="detail-text" id="model">(Make) {tool.model}</p>
+              <p className="detail-text" id="model">{tool.brand} {tool.model}</p>
 
               <hr className="tooldetail-hr"></hr>
             </div>
