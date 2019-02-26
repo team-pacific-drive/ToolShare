@@ -8,6 +8,7 @@ import GoogleMaps from '../components/GoogleMaps'
 class ToolDetail extends React.Component {
   state = {
     tool: null,
+    user: null
   }
 
   componentDidMount = () => {
