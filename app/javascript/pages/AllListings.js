@@ -26,6 +26,7 @@ class AllListings extends React.Component {
   }
 
   render () {
+    // console.log(this.state.tools);
     return (
       <div className="listings__container">
         <div className="mytools-wrap">

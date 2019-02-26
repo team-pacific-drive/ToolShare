@@ -33,12 +33,13 @@ class AuthenticatedApp extends React.Component {
 
   render () {
     const { currentUser } = this.state
+    // console.log(currentUser);
     return (
       <Router>
         <div>
           <Switch>
             <Route path='/' exact component={AllListings}/>
-            <Route path="/tool_details/:id" exact component={ToolDetail}/>
+            <Route path="/tool_details/:id" exact component={ToolDetail} />
             <Route path='/about' exact component={AboutPage} />
             <Route path='/account/maps' exact component={GoogleMaps}/>
             <Route path="/account/my_tools" exact render={(props) =>
