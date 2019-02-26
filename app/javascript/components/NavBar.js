@@ -15,12 +15,13 @@ const NavBar = (props) => {
             </a>
           </div>
           <ul className="navi-items">
+            <a href="/about"><li className="navi-element"><b>About</b></li></a>
             <a href="/"><li className="navi-element"><b>Rent a Tool</b></li></a>
             {props.firstname  &&
               <React.Fragment>
                 <a href="/account/add_tools"><li className="navi-element"><b>Add a Tool</b></li></a>
-                <a href="/about"><li className="navi-element"><b>About</b></li></a>
                 <a href="/account/my_tools"><li className="navi-element"><b>{props.firstname} Tools</b></li></a>
+                <a href="/conversations"><li className="navi-element"><b>Messages</b></li></a>
                 <a href="/users/sign_out" rel="nofollow" data-method="delete"><li className="navi-element sign-out"><b>Sign Out</b></li></a>
               </React.Fragment>
             }
