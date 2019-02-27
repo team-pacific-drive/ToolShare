@@ -22,8 +22,8 @@
 .navi-container {
   top: 0%;
   margin: auto;
-  width: 1174px;
   height: 70px;
+  width: 80vw;
   display: inline-flex;
   align-items: baseline;
 }
@@ -32,11 +32,11 @@
 }
 
 .navi-element {
-  margin-top: -14px;
+  margin-top: -16px;
   display: inline-block;
   font-size: 10pt;
   font-weight: 400;
-  height: 68px;
+  height: 70px;
   text-decoration: none;
   padding-top: 22px;
   padding-left: 16px;

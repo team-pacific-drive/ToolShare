@@ -61,7 +61,9 @@ class ToolDetail extends React.Component {
                       <br></br>
                       <img src={require('../../assets/images/location-icon.svg')} className="contact-icons"/>  San Diego, CA {tool.user_zip_code}</p>
                     </div>
-                    <a href="/conversations"><button className="user-message-button">Direct Message</button></a>
+                    {this.props.currentUser &&
+                      <a href="/conversations"><button className="user-message-button">Direct Message</button></a>
+                    }
                   </div>
                 </div>
               </div>
@@ -74,6 +76,7 @@ class ToolDetail extends React.Component {
             state={tool.user_state}
             toolTitle={tool.title}
             toolUser={tool.user_firstname}
+
             />
           }
           </div>

@@ -96,10 +96,14 @@ label {
 
 }
 
-.one-line {
+.current-user-chat {
   display: flex;
-  flex-direction: column;
-  border: 1px solid red;
+  justify-content: flex-end;
+}
+
+.chat-direction {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .chat-div {
@@ -109,7 +113,6 @@ padding: 0px 24px;
 border-radius: 24px;
 background: lightblue;
 max-width: fit-content;
-border: 1px solid blue;
 }
 
 .chat-div-otheruser {

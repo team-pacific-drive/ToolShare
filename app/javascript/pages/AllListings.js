@@ -35,7 +35,7 @@ class AllListings extends React.Component {
             <p className="all-add-text"><a href='/account/add_tools'>Add a Tool</a></p>
           </div>
         </div>
-        <hr className="mytools-hr"></hr>
+        <hr className="grid-hr"></hr>
         <div className="grid__listing">
           {this.state.tools.map((tool, index) =>
             <Cards key={index}

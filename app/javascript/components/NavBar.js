@@ -29,7 +29,6 @@ class NavBar extends React.Component{
             </a>
           </div>
           <ul className="navi-items">
-            <a href="/about"><li className="navi-element"><b>About</b></li></a>
             <a href="/"><li className="navi-element"><b>Rent a Tool</b></li></a>
             {current_user &&
               <React.Fragment>

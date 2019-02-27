@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+.grid-hr {
+  width: 700px;
+  margin-top: 4px;
+  margin-bottom: 40px;
+}
+
 .grid__listing {
   display: grid;
   justify-content: center;
