@@ -8,31 +8,77 @@
   font-size: 48pt;
   font-family: 'Muli', serif;
   font-weight: 800;
-  margin-bottom: -40px;
   color: #31333D;
 }
 
 .about-header {
   display: block;
-  width: 700px;
+
 }
 
-.team-photo-container {
-  width: 700px;
-}
 
-.photo-row {
-  display: inline;
-  text-align: center;
-}
 
-.photo-card {
-  justify-content: center;
-  display: inline-block;
-  text-align: center;
-  margin: 0px 12.5px 0px 12.5px;
-}
+
+
+
 
 .about-name-text {
   font-weight: bold;
+}
+
+@media (max-width: 699px){
+
+  .about-header {
+  width: 90%;
+  }
+  .about-title {
+    margin-bottom: -20px;
+  }
+  .team-photo-container {
+    width: 100%;
+  }
+  .photo-row {
+    display: block;
+    text-align: center;
+  }
+
+  .photo-card {
+    justify-content: center;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .about-photo {
+    width: 75%;
+  }
+  .about-name-text {
+    font-size: 24pt;
+  }
+}
+
+@media (min-width: 700px){
+
+  .about-header {
+    width: 700px;
+  }
+  .about-title {
+    margin-bottom: -40px;
+  }
+  .team-photo-container {
+    width: 700px;
+  }
+  .photo-row {
+    display: inline;
+    text-align: center;
+  }
+  .photo-card {
+    justify-content: center;
+    display: inline-block;
+    text-align: center;
+    margin: 0px 12.5px 0px 12.5px;
+  }
+  .about-photo {
+    width: 150px;
+    height: 150px;
+  }
 }

@@ -26,19 +26,19 @@ class AboutPage extends React.Component{
             <div className="photo-row">
               <div className="photo-card">
                 <p className="about-name-text">Brandon Cree</p>
-                <img width="150" height="150" src={noPhoto} alt="no-photo"/>
+                <img className="about-photo" src={noPhoto} alt="no-photo"/>
               </div>
               <div className="photo-card">
                 <p className="about-name-text">Eric Ream</p>
-                <img width="150" height="150" src={noPhoto} alt="no-photo"/>
+                <img className="about-photo" src={noPhoto} alt="no-photo"/>
               </div>
               <div className="photo-card">
                 <p className="about-name-text">Justin Garcia</p>
-                <img width="150" height="150" src={noPhoto} alt="no-photo"/>
+                <img className="about-photo" src={noPhoto} alt="no-photo"/>
               </div>
               <div className="photo-card">
                 <p className="about-name-text">Steven Kulp</p>
-                <img width="150" height="150" src={noPhoto} alt="no-photo"/>
+                <img className="about-photo" src={noPhoto} alt="no-photo"/>
               </div>
             </div>
           </div>
