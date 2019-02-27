@@ -1,49 +1,37 @@
+* {
+  font-family: 'Muli', serif;
+}
+
+label {
+  color: #31333D;
+}
+
+text, textarea {
+  vertical-align: top;
+}
+
 .newtools-container {
   display: flex;
   justify-content: center;
 }
 
-.form-container {
-  font-family: 'Muli', serif;
-  font-size: 11pt;
-  font-weight: bold;
-  width: 700px;
-}
-
 .newtools-title {
   font-size: 48pt;
-  font-family: 'Muli', serif;
   font-weight: 800;
   margin-bottom: -40px;
   color: #31333D;
 }
 
-.newtools-header {
-  display: inline;
+.form-container {
+  font-size: 11pt;
+  font-weight: bold;
 }
 
 .required-asterisk {
-  font-family: 'Muli', serif;
   font-size: 10pt;
   color: red;
   display: inline;
   margin: 0px;
-}
-
-.required-text {
-  font-family: 'Muli', serif;
-  font-size: 10pt;
-  text-align: right;
-  align-items: baseline;
-  margin-bottom: -10px;
-  color: #5C5F6D;
-}
-
-
-.newtools-hr {
-  width: 700px;
-  margin-left: 0px;
-  margin-top: 30px;
 }
 
 .form {
@@ -61,68 +49,114 @@ input:focus {
   border-color: #5C5F6D;
   border-radius: 4px;
   margin-bottom: 8px;
-  font-family: 'Muli', serif;
   color: #31333D;
   font-size: 14pt;
 }
 
-.input {
-  height: 36px;
-  width: 700px;
+.required-text {
+  font-size: 10pt;
+  color: #5C5F6D;
 }
 
-.input-small {
-  width: 340px;
-  height: 36px;
-}
 
-.input-extra-small {
-  width: 160px;
-  height: 36px;
-}
-
-.input-description {
-  height: 80px;
-  width: 700px;
-}
-
-.make, .model-form, .deposit {
-  display: inline;
-  margin-left: 0px;
-  margin-right: 20px;
-}
-
-.make-model, .serial-price-deposit  {
-  display: flex;
-  margin-bottom: -16px;
-}
-
-.price-form {
-  display: inline;
-  margin-left: 20px;
-  margin-right: 20px;
-}
 
 .create-button {
   height: 42px;
   margin-top: 8px;
+  margin-left: 0px;
   padding: 8px 18px 12px 18px;
   color: #31333D;
   background-color: #B6EAC2;
   border-radius: 4px;
-  font-family: 'Muli', serif;
   font-size: 14pt;
   font-weight: bold;
 }
 
-.create-button:active {
-
+@media (min-width: 700px){
+  .form-container {
+    width: 700px;
+  }
+  .newtools-header {
+    display: inline;
+  }
+  .newtools-hr {
+    width: 700px;
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+  .required-text {
+    text-align: right;
+    align-items: baseline;
+    margin-bottom: -10px;
+  }
+  .input {
+    height: 36px;
+    width: 700px;
+  }
+  .input-small {
+    height: 36px;
+    width: 340px;
+  }
+  .input-extra-small {
+    height: 36px;
+    width: 160px;
+  }
+  .input-description {
+    height: 80px;
+    width: 700px;
+  }
+  .make, .model-form, .deposit {
+    display: inline;
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+  .make-model, .serial-price-deposit  {
+    display: flex;
+    margin-bottom: -16px;
+  }
+  .price-form {
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
-label {
-  color: #31333D;
-}
-
-text, textarea {
-  vertical-align: top;
+@media (max-width: 699px){
+  .form-container {
+    width: 90%;
+  }
+  .newtools-title {
+    margin-top: 10px;
+  }
+  .newtools-title, .required-text {
+    display: block;
+  }
+  .newtools-hr {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: -4px;
+  }
+  .required-text {
+    margin-top: 40px;
+  }
+  .input, .input-small, .input-extra-small {
+    height: 36px;
+    width: 100%;
+  }
+  .input-description {
+    height: 100px;
+    width: 100%;
+  }
+  .model-form, .deposit {
+    margin-top: -18px;
+  }
+  .make-model, .serial-price-deposit  {
+    margin-top: 0px;
+    margin-bottom: -20px;
+  }
+  .price-form {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
