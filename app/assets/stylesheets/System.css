@@ -92,11 +92,34 @@ label {
 .chat-input-text {
   color: #31333D;
   margin-bottom: -30px;
+  font-size: 18pt;
+
+}
+
+.one-line {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
 }
 
 .chat-div {
 display: flex;
-margin-bottom: -32px;
+margin-bottom: 16px;
+padding: 0px 24px;
+border-radius: 24px;
+background: lightblue;
+max-width: fit-content;
+border: 1px solid blue;
+}
+
+.chat-div-otheruser {
+  display: flex;
+  margin-bottom: 16px;
+  padding: 0px 24px;
+  border-radius: 24px;
+  background: grey;
+  max-width: fit-content;
+  align-content: flex-end;
 }
 
 .message-div {
@@ -110,12 +133,17 @@ margin-bottom: -32px;
 
 .chat-text {
   font-weight: normal;
-  margin-left: 16px;
+  margin-left: 8px;
+
 }
 
 .conversation-list {
   margin: 20px 0px 30px 0px;
   font-size: 24pt;
+}
+
+.input-description {
+    font-size: 18pt;
 }
 
 
