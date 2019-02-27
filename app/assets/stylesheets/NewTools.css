@@ -58,8 +58,6 @@ input:focus {
   color: #5C5F6D;
 }
 
-
-
 .create-button {
   height: 42px;
   margin-top: 8px;
@@ -73,47 +71,58 @@ input:focus {
 }
 
 @media (min-width: 700px){
+
   .form-container {
     width: 700px;
   }
+
   .newtools-header {
     display: inline;
   }
+
   .newtools-hr {
     width: 700px;
     margin-left: 0px;
     margin-top: 30px;
   }
+
   .required-text {
     text-align: right;
     align-items: baseline;
     margin-bottom: -10px;
   }
+
   .input {
     height: 36px;
     width: 700px;
   }
+
   .input-small {
     height: 36px;
     width: 340px;
   }
+
   .input-extra-small {
     height: 36px;
     width: 160px;
   }
+
   .input-description {
     height: 80px;
     width: 700px;
   }
+
   .make, .model-form, .deposit {
     display: inline;
     margin-left: 0px;
     margin-right: 20px;
   }
+
   .make-model, .serial-price-deposit  {
     display: flex;
     margin-bottom: -16px;
   }
+
   .price-form {
     display: inline;
     margin-left: 20px;
@@ -122,39 +131,49 @@ input:focus {
 }
 
 @media (max-width: 699px){
+
   .form-container {
     width: 90%;
   }
+
   .newtools-title {
     margin-top: 10px;
   }
+
   .newtools-title, .required-text {
     display: block;
   }
+
   .newtools-hr {
     width: 100%;
     margin-left: 0px;
     margin-top: 10px;
     margin-bottom: -4px;
   }
+
   .required-text {
     margin-top: 40px;
   }
+
   .input, .input-small, .input-extra-small {
     height: 36px;
     width: 100%;
   }
+
   .input-description {
     height: 100px;
     width: 100%;
   }
+
   .model-form, .deposit {
     margin-top: -18px;
   }
+
   .make-model, .serial-price-deposit  {
     margin-top: 0px;
     margin-bottom: -20px;
   }
+
   .price-form {
     margin-left: 0px;
     margin-right: 0px;
