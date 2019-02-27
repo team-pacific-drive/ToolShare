@@ -79,7 +79,7 @@ class GoogleMaps extends React.Component {
               marker={this.state.activeMarker}
               visible={this.state.showingInfoWindow}>
                 <div>
-                  <h2>{this.state.selectedPlace.name}</h2>
+                  <h2>{this.props.toolTitle}</h2>
                 </div>
             </InfoWindow>
           </Map>

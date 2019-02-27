@@ -2,13 +2,15 @@
   <div class="form-container">
     <p class="login-title"><%= @conversation.subject %></p>
     <hr class="conversation-hr"></hr>
-    <div class="one-line">
+    <div class="chat-direction">
     <% @conversation.receipts_for(current_user).each do |receipt| %>
       <% if receipt.message.sender.name == "#{current_user.firstname} #{current_user.lastname}" %>
+        <div class="current-user-chat">
           <div class="chat-div">
             <p class="description-text"><b><%= receipt.message.sender.name %>:</b></p>
             <p class="chat-text"><%= receipt.message.body %></p>
           </div>
+        </div>
       <% else %>
         <div class="chat-div-otheruser">
           <p class="description-text"><b><%= receipt.message.sender.name %>:</b></p>
@@ -17,7 +19,6 @@
       <% end %>
     <% end %>
   </div>
-
     <%= form_tag conversation_messages_path(@conversation), method: :post do %>
       <div class="message-div">
         <%= text_area_tag :body, nil, placeholder: "Message", class: "input-description" %>
