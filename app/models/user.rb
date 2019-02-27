@@ -19,7 +19,7 @@ class User < ApplicationRecord
   validates_presence_of :firstname, :lastname, :cross_street, :city, :state
   validates_length_of :zip_code, minimum: 5, maximum: 5
 
-  validates_format_of :phone_number, :with => /[0-9]{3}-[0-9]{3}-[0-9]{4}/,
+  #validates_format_of :phone_number, :with => /[0-9]{3}-[0-9]{3}-[0-9]{4}/,
                                      :message => 'must be in xxx-xxx-xxxx format.'
                                      # :length => { :minimum => 10 }
 end
