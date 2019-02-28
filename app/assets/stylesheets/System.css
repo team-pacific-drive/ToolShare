@@ -1,3 +1,23 @@
+* {
+  font-family: 'Muli', serif;
+}
+
+label {
+  color: #31333D;
+}
+
+text, textarea {
+  vertical-align: top;
+}
+
+
+
+
+.form {
+  align-items: center;
+}
+
+
 @media (min-width: 700px){
 
   .login-container {
@@ -9,33 +29,45 @@
     margin-left: 0px;
     margin-top: 20px;
   }
+
+
+  .conversation-hr {
+    width: 700px;
+    margin-bottom: 24px;
+  }
 }
 
 
-.login-container {
-display: flex;
-justify-content: center;
+@media (max-width: 699px){
+  .login-hr {
+    width: 90%;
+  }
+
+  .conversation-hr {
+    width: 100%;
+    margin-bottom: 24px;
+  }
 }
 
-.conversation-container {
+
+
+
+.login-container, .chat-container {
   display: flex;
   justify-content: center;
 }
 
+
 .login-title {
   font-size: 48pt;
-  font-family: 'Muli', serif;
   font-weight: 800;
   margin-bottom: 0px;
   color: #31333D;
 }
 
-.login-hr {
-  width: 100%x;
-}
+
 
 .form-container {
-  font-family: 'Muli', serif;
   font-size: 11pt;
   font-weight: bold;
   align-items: center;
@@ -43,13 +75,6 @@ justify-content: center;
 }
 
 
-.form {
-  align-items: center;
-}
-
-label {
-  color: #31333D;
-}
 
 .additional-links {
   margin-top: 10px;
@@ -59,10 +84,6 @@ label {
 
 
 
-.conversation-hr {
-  width: 700px;
-  margin-bottom: 24px;
-}
 
 
 .login-button {
@@ -72,7 +93,6 @@ label {
   color: #31333D;
   background-color: #B6EAC2;
   border-radius: 4px;
-  font-family: 'Muli', serif;
   font-size: 14pt;
   font-weight: bold;
 }
@@ -83,7 +103,6 @@ label {
   color: #31333D;
   background-color: lightgrey;
   border-radius: 4px;
-  font-family: 'Muli', serif;
   font-size: 14pt;
 }
 
@@ -148,16 +167,18 @@ max-width: fit-content;
 
 }
 
-.conversation-list {
+.chat-list-item {
   margin: 20px 0px 30px 0px;
   font-size: 24pt;
+  padding: 12px 18px;
+  background-color: lightgrey;
+  border-style: none none solid none;
+  border-width: 2px;
+  border-color: #5C5F6D;
+  border-radius: 4px;
+  color: #31333D;
 }
 
 .input-description {
     font-size: 18pt;
-}
-
-
-text, textarea {
-  vertical-align: top;
 }

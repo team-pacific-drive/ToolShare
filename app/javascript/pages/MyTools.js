@@ -73,10 +73,10 @@ class MyTools extends React.Component {
                   <a className="edit" type='submit' href={`/account/edit_tool/${tool.id}`} rel="nofollow"><b>Edit</b></a>
                   <a className="delete" type='submit' data-confirm="Are you sure you want to delete this item?" onClick={() => this.handleDelete(tool.id)} rel="nofollow"><b>X</b></a>
                 </td>
-                <hr className="listing-hr"></hr>
               </tr>
             )}
             </tbody>
+            <hr className="listing-hr"></hr>
           </table>
           <hr className="mytools-hr"></hr>
         </div>

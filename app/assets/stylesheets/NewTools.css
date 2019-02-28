@@ -1,14 +1,4 @@
-* {
-  font-family: 'Muli', serif;
-}
 
-label {
-  color: #31333D;
-}
-
-text, textarea {
-  vertical-align: top;
-}
 
 .newtools-container {
   display: flex;
