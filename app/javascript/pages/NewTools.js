@@ -65,7 +65,7 @@ class NewTools extends React.Component {
 
   render () {
     const { responseOk, toolAttributes, errors } = this.state
-    const asteriskStyle = {color: "red"}
+    const asteriskStyle = { color: "red" }
     return (
       <div className="newtools-container">
         <div className="form-container">
@@ -91,9 +91,9 @@ class NewTools extends React.Component {
               <br></br>
               <label htmlFor="description">Description<p className="required-asterisk">*</p></label>
               <br></br>
-              <input
+              <textarea
                 className="input-description"
-                type="text" rows="3"
+                type="textarea" rows="3"
                 name="description"
                 value={toolAttributes.description}
                 onChange={this.handleChange}

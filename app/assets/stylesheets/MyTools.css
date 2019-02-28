@@ -137,6 +137,7 @@ td {
   .mytools-header {
     width: 90%;
     margin-top: 10px;
+    display: block;
   }
 
   .add-text {

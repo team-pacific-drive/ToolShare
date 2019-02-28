@@ -1,6 +1,6 @@
 a:link, a:visited {
   text-decoration: none !important;
-  color: black;
+  color: #31333D;
   font-family: 'Muli', sans-serif;
 }
 
@@ -43,8 +43,8 @@ img {
   font-size: 18pt;
   border-radius: 8px 0px 16px 0px;
   height: 42px;
-  top: 12px;
-  padding: 12px;
+  top: 8px;
+  padding: 8px 12px;
   color: #31333D;
   background-color: #B6EAC2;
   font-family: 'Muli', serif;
