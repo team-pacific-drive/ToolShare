@@ -39,9 +39,7 @@
   .cards-grid {
     grid-template-columns: repeat(1, 16rem);
   }
-  .mytools-header {
-    display: block;
-  }
+
 }
 
 .alllistings-title {
