@@ -38,8 +38,12 @@ text, textarea {
   align-items: center;
 }
 
-input:focus {
+input:focus, textarea:focus {
   outline: none;
+}
+
+textarea {
+  resize: none;
 }
 
 .input, .input-description, .input-small, .input-extra-small {
@@ -57,6 +61,8 @@ input:focus {
   font-size: 10pt;
   color: #5C5F6D;
 }
+
+
 
 .create-button {
   height: 42px;
@@ -108,7 +114,6 @@ input:focus {
   }
 
   .input-description {
-    height: 80px;
     width: 700px;
   }
 
