@@ -90,26 +90,3 @@
   text-align: left;
   position: absolute;
 }
-
-@media screen and (min-width: 899px){
-
-}
-
-@media screen and (max-width: 900px){
-
-}
-
-.dropdown-content a {
-  float: left;
-  display: block;
-  color: red;
-  text-align: center;
-  padding: 14px 16px;
-}
-
-.dropdown-content a:hover {
-  background-color: blue;
-  color: black;
-}
-
-.
