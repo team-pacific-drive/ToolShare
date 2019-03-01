@@ -1,3 +1,7 @@
+* {
+  font-family: 'Muli', serif;
+}
+
 .mytools-wrap {
   display: flex;
   justify-content: center;
@@ -12,7 +16,6 @@
 
 .mytools-title {
   font-size: 48pt;
-  font-family: 'Muli', serif;
   color: #31333D;
   font-weight: 800;
   text-align: left;
@@ -21,7 +24,6 @@
 }
 
 .add-text {
-  margin-left: 280px;
   margin-top: 25px;
   padding: 12px 18px 12px 18px;
   text-align: center;
@@ -35,19 +37,7 @@
   text-align: center;
 }
 
-.mytools-hr {
-  width: 700px;
-  margin-top: 4px;
-}
-
-.mytools-table {
-  text-align: left;
-  width: 700px;
-}
-
-
 th, td {
-  font-family: 'Muli', serif;
   color: #31333D;
 }
 
@@ -83,37 +73,138 @@ td {
   font-weight: bold;
 }
 
-.th-img {
-  min-width: 100px;
+@media (min-width: 700px){
+
+  .add-text {
+    margin-left: 280px;
+  }
+
+  .mytools-hr {
+    width: 700px;
+    margin-top: 4px;
+  }
+
+  .mytools-table {
+    text-align: left;
+    width: 700px;
+  }
+
+  .mytools-img-thumbnail {
+    height: 74px;
+    width: 74px;
+  }
+
+  .th-img {
+    min-width: 100px;
+  }
+
+  .th-title {
+    width: 250px;
+  }
+
+  .th-make {
+    width: 250px;
+  }
+
+  .th-created {
+    width: 250px;
+  }
+
+  .created-text {
+    display: none;
+  }
+
+  .th-price {
+    width: 50px;
+  }
+
+  .th-edit {
+    width: 150px;
+  }
+
+  .edit-delete {
+    width: 145px;
+    margin-right: -5px;
+  }
+
+  .listing-hr {
+    display: none;
+  }
 }
 
-.th-title {
-  width: 250px;
-}
+@media (max-width: 699px) {
 
-.th-make {
-  width: 250px;
-}
+  .mytools-header {
+    width: 90%;
+    margin-top: 10px;
+    display: block;
+  }
 
-.th-price {
-  width: 50px;
-}
+  .add-text {
+    margin-left: auto;
+  }
 
-.th-edit {
-  width: 150px;
-}
+  .mytools-hr {
+    width: 90%;
+    margin-top: 4px;
+  }
 
+  .mytools-table {
+    width: 90%;
+    text-align: left;
+  }
 
-.edit-delete {
-  width: 145px;
-  margin-right: -5px;
-}
-/* .model, .serial {
-  font-style: italic;
-} */
-/* tr {
-  margin: 0;
-}
+  .mytools-img-thumbnail {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
 
-tr:nth-child(even) {background: #CCC}
-tr:nth-child(odd) {background: #FFF} */
+  .mytools-table-title {
+    font-weight: bold;
+    font-size: 48pt;
+  }
+  .created-date, .created-text {
+    font-style: italic;
+    display: inline;
+  }
+
+  .model, .created-date {
+    font-size: 36pt;
+  }
+
+  .price {
+    font-size: 48pt;
+  }
+
+  th, .model {
+    display: none;
+  }
+
+  tr, td {
+    display: block;
+    align-items: center;
+    text-align: center;
+  }
+
+  .edit {
+      margin: 0px;
+      width: 200px;
+  }
+
+  .edit-delete {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .edit, .delete {
+    font-size: 32pt;
+  }
+
+  .listing-hr {
+    width: 100%;
+    height: 8px;
+    background: darkgrey;
+    margin-top: 48px;
+  }
+}

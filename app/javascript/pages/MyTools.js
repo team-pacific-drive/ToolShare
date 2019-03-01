@@ -57,17 +57,17 @@ class MyTools extends React.Component {
               <tr>
                 <th className="th-img" ></th>
                 <th className="th-title">Title</th>
-                <th className="th-make">Created</th>
                 <th className="th-make">Make/Model</th>
+                <th className="th-created">Created</th>
                 <th className="th-price">Price</th>
                 <th className="th-edit"></th>
               </tr>
               {this.state.tools.map((tool, index) =>
               <tr key={index}>
-                <td><img src={`${tool.photo}`} height="74" width="74"/></td>
-                <td>{tool.title}</td>
-                <td className="created-date">{moment(tool.created_at).format('l')}</td>
+                <td className="mytools-img-thumbnail"><img src={`${tool.photo}`}/></td>
+                <td className="mytools-table-title">{tool.title}</td>
                 <td className="model">{tool.brand} {tool.model}</td>
+                <td className="created-date"><p className="created-text">Posted on </p>{moment(tool.created_at).format('l')}</td>
                 <td className="price">${tool.price}</td>
                 <td className="edit-delete">
                   <a className="edit" type='submit' href={`/account/edit_tool/${tool.id}`} rel="nofollow"><b>Edit</b></a>
@@ -76,6 +76,7 @@ class MyTools extends React.Component {
               </tr>
             )}
             </tbody>
+            <hr className="listing-hr"></hr>
           </table>
           <hr className="mytools-hr"></hr>
         </div>

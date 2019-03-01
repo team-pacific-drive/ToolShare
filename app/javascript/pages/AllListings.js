@@ -28,15 +28,15 @@ class AllListings extends React.Component {
   render () {
     // console.log(this.state.tools);
     return (
-      <div className="listings__container">
+      <div>
         <div className="mytools-wrap">
           <div className="mytools-header">
-            <p className="alllistings-title">All Listings</p>
-            <p className="all-add-text"><a href='/account/add_tools'>Add a Tool</a></p>
+            <h1 className="mytools-title">Listings</h1>
+            <p className="add-text"><a href='/account/add_tools'>Add a Tool</a></p>
           </div>
         </div>
         <hr className="grid-hr"></hr>
-        <div className="grid__listing">
+        <div className="cards-grid">
           {this.state.tools.map((tool, index) =>
             <Cards key={index}
               photo={tool.photo}

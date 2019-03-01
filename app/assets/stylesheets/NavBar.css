@@ -20,9 +20,9 @@
 
 .navi-container {
   top: 0%;
-  margin: auto;
+
   height: 70px;
-  width: 80vw;
+  width: 75vw;
   display: inline-flex;
   align-items: baseline;
 }
@@ -57,14 +57,38 @@
   color: white;
 }
 
-.toolshare {
+.logo-container {
   margin: -40px auto auto 0%;
   text-align: left;
   color: white;
 
 }
 
-.toolshare > a > h2 {
+
+@media screen and (max-width: 949px) {
+  .navi-element {
+    display: none;
+  }
+
+  .navi-items {
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 950px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+
+.mobile-menu {
+  color: white;
+  float: none;
+  display: block;
+  text-align: left;
+  position: absolute;
 }
 
 @media screen and (min-width: 899px){

@@ -18,8 +18,8 @@ const Cards = (props) => {
           <div className="card-title-container">
             <p className="card-title"><b>{props.title}</b></p>
             <div className="card-bottom">
-              <p>{props.city}, {props.zipcode}</p>
-              <p className="days-ago"><b>{newTime}</b></p>
+              <p><b>{props.city}, CA {props.zipcode}</b></p>
+              <p className="days-ago">Posted {newTime}</p>
             </div>
           </div>
         </div>
