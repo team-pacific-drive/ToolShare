@@ -28,7 +28,7 @@ class NavBar extends React.Component{
               </div>
             </a>
           </div>
-          <ul className="navi-items">
+          <ul className="navi-items nav-items-large">
             <a href="/"><li className="navi-element"><b>Rent a Tool</b></li></a>
             {current_user &&
               <React.Fragment>
@@ -47,6 +47,28 @@ class NavBar extends React.Component{
               </React.Fragment>
             }
           </ul>
+          <div className='mobile-dropdown'>
+            <a href="#" className="dropdown-button"><i class="material-icons">menu</i></a>
+            <ul className="dropdown-content">
+              <a href="/"><li className="navi-element"><b>Rent a Tool</b></li></a>
+              {current_user &&
+                <React.Fragment>
+                  <a href="/account/add_tools"><li className="navi-element"><b>Add a Tool</b></li></a>
+                  <a href="/about"><li className="navi-element"><b>About</b></li></a>
+                  <a href="/account/my_tools"><li className="navi-element"><b>{this.addingToEndofName()} Tools</b></li></a>
+                  <a href="/users/sign_out" rel="nofollow" data-method="delete"><li className="navi-element sign-out"><b>Sign Out</b></li></a>
+                </React.Fragment>
+              }
+              {!current_user &&
+                <React.Fragment>
+                  <a href="/users/sign_in"><li className="navi-element"><b>Add a Tool</b></li></a>
+                  <a href="/about"><li className="navi-element"><b>About</b></li></a>
+                  <a href="/users/sign_in"><li className="navi-element"><b>Sign In</b></li></a>
+                  <a href="/users/sign_up"><li className="navi-element login-register"><b>Join</b></li></a>
+                </React.Fragment>
+              }
+            </ul>
+          </div>
         </div>
       </div>
     )
