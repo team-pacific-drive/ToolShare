@@ -61,7 +61,6 @@ class NavBar extends React.Component{
                 </a>
               </React.Fragment>
             }
-          </ul>
         </div>
       </div>
     )
